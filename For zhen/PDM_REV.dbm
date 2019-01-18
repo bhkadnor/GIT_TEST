@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.9.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:NetezzaModel="http:///com/ibm/db/models/netezza/netezza.ecore" xmlns:SQLDataTypes="http:///org/eclipse/datatools/modelbase/sql/datatypes.ecore">
+  <NetezzaModel:NetezzaDatabase xmi:id="_WE9yMI6wEeiYx-AkSxaI-A" name="ida" vendor="Netezza" version="7.x" schemas="_WHycsI6wEeiYx-AkSxaI-A">
+    <eAnnotations xmi:id="_WE9yMY6wEeiYx-AkSxaI-A" source="ConnectionURI">
+      <details xmi:id="_WE9yMo6wEeiYx-AkSxaI-A" key="ConnectionKey" value="ida"/>
+    </eAnnotations>
+  </NetezzaModel:NetezzaDatabase>
+  <NetezzaModel:NetezzaSchema xmi:id="_WHycsI6wEeiYx-AkSxaI-A" name="ADMIN" tables="_WHycsY6wEeiYx-AkSxaI-A _WHyczI6wEeiYx-AkSxaI-A _WHyc2I6wEeiYx-AkSxaI-A _WHyc946wEeiYx-AkSxaI-A _WHyc_o6wEeiYx-AkSxaI-A _WHyc446wEeiYx-AkSxaI-A _WHydAo6wEeiYx-AkSxaI-A _WHydDY6wEeiYx-AkSxaI-A _WHydFY6wEeiYx-AkSxaI-A _WHycw46wEeiYx-AkSxaI-A _WH8NsI6wEeiYx-AkSxaI-A _WH8NuI6wEeiYx-AkSxaI-A _WH8NwI6wEeiYx-AkSxaI-A _WH8Nyo6wEeiYx-AkSxaI-A _WH8N0o6wEeiYx-AkSxaI-A _WH8N2o6wEeiYx-AkSxaI-A _WH8N4Y6wEeiYx-AkSxaI-A _WH8N6Y6wEeiYx-AkSxaI-A" database="_WE9yMI6wEeiYx-AkSxaI-A"/>
+  <NetezzaModel:NetezzaTable xmi:id="_WHycsY6wEeiYx-AkSxaI-A" name="Emp" schema="_WHycsI6wEeiYx-AkSxaI-A">
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHycso6wEeiYx-AkSxaI-A" name="EmpId" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHycs46wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHyctI6wEeiYx-AkSxaI-A" name="EmpName">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHyctY6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHycto6wEeiYx-AkSxaI-A" name="ComId" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHyct46wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHycuI6wEeiYx-AkSxaI-A" name="CompBranch" nullable="false" defaultValue="abr">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHycuY6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <constraints xsi:type="NetezzaModel:NetezzaForeignKey" xmi:id="_WHycuo6wEeiYx-AkSxaI-A" name="Emp_Company_FK" members="_WHycto6wEeiYx-AkSxaI-A _WHycuI6wEeiYx-AkSxaI-A" onDelete="CASCADE" uniqueConstraint="_WHycyo6wEeiYx-AkSxaI-A" referencedTable="_WHycw46wEeiYx-AkSxaI-A">
+      <eAnnotations xmi:id="_WHycu46wEeiYx-AkSxaI-A" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_WHycvI6wEeiYx-AkSxaI-A" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_WHycvY6wEeiYx-AkSxaI-A" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_WHycvo6wEeiYx-AkSxaI-A" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_WHycv46wEeiYx-AkSxaI-A" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_WHycwI6wEeiYx-AkSxaI-A" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="NetezzaModel:NetezzaPrimaryKey" xmi:id="_WHycwY6wEeiYx-AkSxaI-A" name="Emp_PK" members="_WHycso6wEeiYx-AkSxaI-A"/>
+    <distributionKey xmi:id="_WHycwo6wEeiYx-AkSxaI-A" distributeOn="RANDOM"/>
+  </NetezzaModel:NetezzaTable>
+  <NetezzaModel:NetezzaTable xmi:id="_WHycw46wEeiYx-AkSxaI-A" name="Company" schema="_WHycsI6wEeiYx-AkSxaI-A" referencingForeignKeys="_WHycuo6wEeiYx-AkSxaI-A">
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHycxI6wEeiYx-AkSxaI-A" name="ComId" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHycxY6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHycxo6wEeiYx-AkSxaI-A" name="ComName">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHycx46wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHycyI6wEeiYx-AkSxaI-A" name="CompBranch" nullable="false" defaultValue="abr">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHycyY6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <constraints xsi:type="NetezzaModel:NetezzaPrimaryKey" xmi:id="_WHycyo6wEeiYx-AkSxaI-A" name="Company_PK" members="_WHycxI6wEeiYx-AkSxaI-A _WHycyI6wEeiYx-AkSxaI-A" ForeignKey="_WHycuo6wEeiYx-AkSxaI-A"/>
+    <distributionKey xmi:id="_WHycy46wEeiYx-AkSxaI-A" distributeOn="RANDOM"/>
+  </NetezzaModel:NetezzaTable>
+  <NetezzaModel:NetezzaTable xmi:id="_WHyczI6wEeiYx-AkSxaI-A" name="TablePK" schema="_WHycsI6wEeiYx-AkSxaI-A">
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHyczY6wEeiYx-AkSxaI-A" name="Column1" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHyczo6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHycz46wEeiYx-AkSxaI-A" name="Column2" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHyc0I6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHyc0Y6wEeiYx-AkSxaI-A" name="Column3" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHyc0o6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHyc046wEeiYx-AkSxaI-A" name="Column5">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHyc1I6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHyc1Y6wEeiYx-AkSxaI-A" name="Column6">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHyc1o6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <distributionKey xmi:id="_WHyc146wEeiYx-AkSxaI-A" distributeOn="RANDOM"/>
+  </NetezzaModel:NetezzaTable>
+  <NetezzaModel:NetezzaTable xmi:id="_WHyc2I6wEeiYx-AkSxaI-A" name="School" schema="_WHycsI6wEeiYx-AkSxaI-A" referencingForeignKeys="_WHyc746wEeiYx-AkSxaI-A">
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHyc2Y6wEeiYx-AkSxaI-A" name="SchoolID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHyc2o6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHyc246wEeiYx-AkSxaI-A" name="Address">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHyc3I6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHyc3Y6wEeiYx-AkSxaI-A" name="Branch" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHyc3o6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHyc346wEeiYx-AkSxaI-A" name="SchoolName">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHyc4I6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <constraints xsi:type="NetezzaModel:NetezzaPrimaryKey" xmi:id="_WHyc4Y6wEeiYx-AkSxaI-A" name="School_PK" members="_WHyc2Y6wEeiYx-AkSxaI-A _WHyc3Y6wEeiYx-AkSxaI-A" ForeignKey="_WHyc746wEeiYx-AkSxaI-A"/>
+    <distributionKey xmi:id="_WHyc4o6wEeiYx-AkSxaI-A" distributeOn="RANDOM"/>
+  </NetezzaModel:NetezzaTable>
+  <NetezzaModel:NetezzaTable xmi:id="_WHyc446wEeiYx-AkSxaI-A" name="Student" schema="_WHycsI6wEeiYx-AkSxaI-A">
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHyc5I6wEeiYx-AkSxaI-A" name="StudentID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHyc5Y6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHyc5o6wEeiYx-AkSxaI-A" name="Name">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHyc546wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHyc6I6wEeiYx-AkSxaI-A" name="Address">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHyc6Y6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHyc6o6wEeiYx-AkSxaI-A" name="SchoolID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHyc646wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHyc7I6wEeiYx-AkSxaI-A" name="Branch" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHyc7Y6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <constraints xsi:type="NetezzaModel:NetezzaPrimaryKey" xmi:id="_WHyc7o6wEeiYx-AkSxaI-A" name="Student_PK" members="_WHyc5I6wEeiYx-AkSxaI-A"/>
+    <constraints xsi:type="NetezzaModel:NetezzaForeignKey" xmi:id="_WHyc746wEeiYx-AkSxaI-A" name="Student_School_FK" members="_WHyc6o6wEeiYx-AkSxaI-A _WHyc7I6wEeiYx-AkSxaI-A" onDelete="CASCADE" uniqueConstraint="_WHyc4Y6wEeiYx-AkSxaI-A" referencedTable="_WHyc2I6wEeiYx-AkSxaI-A">
+      <eAnnotations xmi:id="_WHyc8I6wEeiYx-AkSxaI-A" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_WHyc8Y6wEeiYx-AkSxaI-A" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_WHyc8o6wEeiYx-AkSxaI-A" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_WHyc846wEeiYx-AkSxaI-A" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_WHyc9I6wEeiYx-AkSxaI-A" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_WHyc9Y6wEeiYx-AkSxaI-A" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <distributionKey xmi:id="_WHyc9o6wEeiYx-AkSxaI-A" distributeOn="RANDOM"/>
+  </NetezzaModel:NetezzaTable>
+  <NetezzaModel:NetezzaTable xmi:id="_WHyc946wEeiYx-AkSxaI-A" name="TestTab2" schema="_WHycsI6wEeiYx-AkSxaI-A">
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHyc-I6wEeiYx-AkSxaI-A" name="PK1" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHyc-Y6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHyc-o6wEeiYx-AkSxaI-A" name="Col2">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHyc-46wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <constraints xsi:type="NetezzaModel:NetezzaPrimaryKey" xmi:id="_WHyc_I6wEeiYx-AkSxaI-A" name="TestTab2_PK" members="_WHyc-I6wEeiYx-AkSxaI-A"/>
+    <distributionKey xmi:id="_WHyc_Y6wEeiYx-AkSxaI-A" distributeOn="RANDOM"/>
+  </NetezzaModel:NetezzaTable>
+  <NetezzaModel:NetezzaTable xmi:id="_WHyc_o6wEeiYx-AkSxaI-A" name="TestTable" schema="_WHycsI6wEeiYx-AkSxaI-A">
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHyc_46wEeiYx-AkSxaI-A" name="Col1">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHydAI6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <distributionKey xmi:id="_WHydAY6wEeiYx-AkSxaI-A" distributeOn="RANDOM"/>
+  </NetezzaModel:NetezzaTable>
+  <NetezzaModel:NetezzaTable xmi:id="_WHydAo6wEeiYx-AkSxaI-A" name="Table_Comment" schema="_WHycsI6wEeiYx-AkSxaI-A">
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHydA46wEeiYx-AkSxaI-A" name="Column1" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHydBI6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHydBY6wEeiYx-AkSxaI-A" name="Column2" description="This is PK" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHydBo6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHydB46wEeiYx-AkSxaI-A" name="Column3" description="This is normal Col">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHydCI6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHydCY6wEeiYx-AkSxaI-A" name="Column4">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHydCo6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <constraints xsi:type="NetezzaModel:NetezzaPrimaryKey" xmi:id="_WHydC46wEeiYx-AkSxaI-A" name="Table_Comment_PK" members="_WHydA46wEeiYx-AkSxaI-A _WHydBY6wEeiYx-AkSxaI-A"/>
+    <distributionKey xmi:id="_WHydDI6wEeiYx-AkSxaI-A" distributeOn="RANDOM"/>
+  </NetezzaModel:NetezzaTable>
+  <NetezzaModel:NetezzaTable xmi:id="_WHydDY6wEeiYx-AkSxaI-A" name="VARBIN_CONVERSION_TEST4" schema="_WHycsI6wEeiYx-AkSxaI-A">
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHydDo6wEeiYx-AkSxaI-A" name="KEY" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_WHydD46wEeiYx-AkSxaI-A" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHydEI6wEeiYx-AkSxaI-A" name="CODE_PAGE_NAME">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHydEY6wEeiYx-AkSxaI-A" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHydEo6wEeiYx-AkSxaI-A" name="VAR_BINARY_TEXT">
+      <containedType xsi:type="SQLDataTypes:BinaryStringDataType" xmi:id="_WHydE46wEeiYx-AkSxaI-A" name="VARBINARY" primitiveType="BINARY_VARYING" length="80"/>
+    </columns>
+    <distributionKey xmi:id="_WHydFI6wEeiYx-AkSxaI-A" columns="_WHydDo6wEeiYx-AkSxaI-A"/>
+  </NetezzaModel:NetezzaTable>
+  <NetezzaModel:NetezzaTable xmi:id="_WHydFY6wEeiYx-AkSxaI-A" name="Product" schema="_WHycsI6wEeiYx-AkSxaI-A">
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHydFo6wEeiYx-AkSxaI-A" name="PName">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHydF46wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHydGI6wEeiYx-AkSxaI-A" name="PId" nullable="false" defaultValue="ABC">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHydGY6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WHydGo6wEeiYx-AkSxaI-A" name="PCode" description="This is PK 2" nullable="false" defaultValue="">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WHydG46wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <distributionKey xmi:id="_WHydHI6wEeiYx-AkSxaI-A" distributeOn="RANDOM"/>
+  </NetezzaModel:NetezzaTable>
+  <NetezzaModel:NetezzaTable xmi:id="_WH8NsI6wEeiYx-AkSxaI-A" name="VARBIN_CONVERSION_TEST" schema="_WHycsI6wEeiYx-AkSxaI-A">
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WH8NsY6wEeiYx-AkSxaI-A" name="KEY" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_WH8Nso6wEeiYx-AkSxaI-A" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WH8Ns46wEeiYx-AkSxaI-A" name="CODE_PAGE_NAME">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WH8NtI6wEeiYx-AkSxaI-A" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WH8NtY6wEeiYx-AkSxaI-A" name="VAR_BINARY_TEXT">
+      <containedType xsi:type="SQLDataTypes:BinaryStringDataType" xmi:id="_WH8Nto6wEeiYx-AkSxaI-A" name="VARBINARY" primitiveType="BINARY_VARYING" length="80"/>
+    </columns>
+    <distributionKey xmi:id="_WH8Nt46wEeiYx-AkSxaI-A" distributeOn="RANDOM"/>
+  </NetezzaModel:NetezzaTable>
+  <NetezzaModel:NetezzaTable xmi:id="_WH8NuI6wEeiYx-AkSxaI-A" name="VARBIN_CONVERSION_TEST_1" schema="_WHycsI6wEeiYx-AkSxaI-A">
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WH8NuY6wEeiYx-AkSxaI-A" name="KEY" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_WH8Nuo6wEeiYx-AkSxaI-A" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WH8Nu46wEeiYx-AkSxaI-A" name="CODE_PAGE_NAME">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WH8NvI6wEeiYx-AkSxaI-A" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WH8NvY6wEeiYx-AkSxaI-A" name="VAR_BINARY_TEXT">
+      <containedType xsi:type="SQLDataTypes:BinaryStringDataType" xmi:id="_WH8Nvo6wEeiYx-AkSxaI-A" name="VARBINARY" primitiveType="BINARY_VARYING" length="80"/>
+    </columns>
+    <distributionKey xmi:id="_WH8Nv46wEeiYx-AkSxaI-A" columns="_WH8NuY6wEeiYx-AkSxaI-A"/>
+  </NetezzaModel:NetezzaTable>
+  <NetezzaModel:NetezzaTable xmi:id="_WH8NwI6wEeiYx-AkSxaI-A" name="TEST_TABLE" schema="_WHycsI6wEeiYx-AkSxaI-A">
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WH8NwY6wEeiYx-AkSxaI-A" name="Column1" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WH8Nwo6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WH8Nw46wEeiYx-AkSxaI-A" name="Column2" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WH8NxI6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WH8NxY6wEeiYx-AkSxaI-A" name="Column3">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WH8Nxo6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <constraints xsi:type="NetezzaModel:NetezzaUniqueConstraint" xmi:id="_WH8Nx46wEeiYx-AkSxaI-A" name="TEST_TABLE_Column1_UN" members="_WH8NxY6wEeiYx-AkSxaI-A _WH8Nw46wEeiYx-AkSxaI-A"/>
+    <constraints xsi:type="NetezzaModel:NetezzaPrimaryKey" xmi:id="_WH8NyI6wEeiYx-AkSxaI-A" name="Table1_PK" members="_WH8NwY6wEeiYx-AkSxaI-A _WH8Nw46wEeiYx-AkSxaI-A"/>
+    <distributionKey xmi:id="_WH8NyY6wEeiYx-AkSxaI-A" distributeOn="RANDOM"/>
+  </NetezzaModel:NetezzaTable>
+  <NetezzaModel:NetezzaTable xmi:id="_WH8Nyo6wEeiYx-AkSxaI-A" name="VARBIN_CONVERSION_TEST3" schema="_WHycsI6wEeiYx-AkSxaI-A">
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WH8Ny46wEeiYx-AkSxaI-A" name="KEY" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_WH8NzI6wEeiYx-AkSxaI-A" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WH8NzY6wEeiYx-AkSxaI-A" name="CODE_PAGE_NAME">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WH8Nzo6wEeiYx-AkSxaI-A" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WH8Nz46wEeiYx-AkSxaI-A" name="VAR_BINARY_TEXT">
+      <containedType xsi:type="SQLDataTypes:BinaryStringDataType" xmi:id="_WH8N0I6wEeiYx-AkSxaI-A" name="VARBINARY" primitiveType="BINARY_VARYING" length="80"/>
+    </columns>
+    <distributionKey xmi:id="_WH8N0Y6wEeiYx-AkSxaI-A" columns="_WH8Ny46wEeiYx-AkSxaI-A"/>
+  </NetezzaModel:NetezzaTable>
+  <NetezzaModel:NetezzaTable xmi:id="_WH8N0o6wEeiYx-AkSxaI-A" name="NETEZZA_TEST" schema="_WHycsI6wEeiYx-AkSxaI-A">
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WH8N046wEeiYx-AkSxaI-A" name="KEY" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_WH8N1I6wEeiYx-AkSxaI-A" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WH8N1Y6wEeiYx-AkSxaI-A" name="CODE_PAGE_NAME">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WH8N1o6wEeiYx-AkSxaI-A" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WH8N146wEeiYx-AkSxaI-A" name="VAR_BINARY_TEXT">
+      <containedType xsi:type="SQLDataTypes:BinaryStringDataType" xmi:id="_WH8N2I6wEeiYx-AkSxaI-A" name="VARBINARY" primitiveType="BINARY_VARYING" length="80"/>
+    </columns>
+    <distributionKey xmi:id="_WH8N2Y6wEeiYx-AkSxaI-A" distributeOn="RANDOM"/>
+  </NetezzaModel:NetezzaTable>
+  <NetezzaModel:NetezzaTable xmi:id="_WH8N2o6wEeiYx-AkSxaI-A" name="SelfTable" schema="_WHycsI6wEeiYx-AkSxaI-A">
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WH8N246wEeiYx-AkSxaI-A" name="Column1" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WH8N3I6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WH8N3Y6wEeiYx-AkSxaI-A" name="Column3">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WH8N3o6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <constraints xsi:type="NetezzaModel:NetezzaPrimaryKey" xmi:id="_WH8N346wEeiYx-AkSxaI-A" name="SelfTable_PK" members="_WH8N246wEeiYx-AkSxaI-A"/>
+    <distributionKey xmi:id="_WH8N4I6wEeiYx-AkSxaI-A" distributeOn="RANDOM"/>
+  </NetezzaModel:NetezzaTable>
+  <NetezzaModel:NetezzaTable xmi:id="_WH8N4Y6wEeiYx-AkSxaI-A" name="ENTITY1" schema="_WHycsI6wEeiYx-AkSxaI-A">
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WH8N4o6wEeiYx-AkSxaI-A" name="ATTRIBUTE1">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WH8N446wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WH8N5I6wEeiYx-AkSxaI-A" name="ATTRIBUTE2">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WH8N5Y6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WH8N5o6wEeiYx-AkSxaI-A" name="ATTRIBUTE6">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WH8N546wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_RqKTcI6zEeiYx-AkSxaI-A" name="ATTRIBUTE3" nullable="false" defaultValue="10">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_RqKTcY6zEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <constraints xsi:type="NetezzaModel:NetezzaPrimaryKey" xmi:id="_RtTuEI6zEeiYx-AkSxaI-A" name="ENTITY1_PK" members="_RqKTcI6zEeiYx-AkSxaI-A"/>
+    <distributionKey xmi:id="_WH8N6I6wEeiYx-AkSxaI-A" distributeOn="RANDOM"/>
+  </NetezzaModel:NetezzaTable>
+  <NetezzaModel:NetezzaTable xmi:id="_WH8N6Y6wEeiYx-AkSxaI-A" name="Tab_Alter" schema="_WHycsI6wEeiYx-AkSxaI-A">
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WH8N6o6wEeiYx-AkSxaI-A" name="Column1" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WH8N646wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WH8N7I6wEeiYx-AkSxaI-A" name="Column2" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WH8N7Y6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WH8N7o6wEeiYx-AkSxaI-A" name="Column3">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WH8N746wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_WH8N8I6wEeiYx-AkSxaI-A" name="Column4" nullable="false" defaultValue="ab">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_WH8N8Y6wEeiYx-AkSxaI-A" name="CHAR" length="5"/>
+    </columns>
+    <constraints xsi:type="NetezzaModel:NetezzaPrimaryKey" xmi:id="_WH8N8o6wEeiYx-AkSxaI-A" name="Tab_Alter_PK" members="_WH8N6o6wEeiYx-AkSxaI-A _WH8N7I6wEeiYx-AkSxaI-A _WH8N8I6wEeiYx-AkSxaI-A"/>
+    <distributionKey xmi:id="_WH8N846wEeiYx-AkSxaI-A" distributeOn="RANDOM"/>
+  </NetezzaModel:NetezzaTable>
+</xmi:XMI>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.9.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:LogicalDataModel="http:///com/ibm/db/models/logical/logical.ecore">
+  <LogicalDataModel:Package xmi:id="_XLSxEJymEeidvNSp4_jd1w" name="Package1" targetNamespace="Package1.ldm" children="_XLSxFZymEeidvNSp4_jd1w _XLSxFpymEeidvNSp4_jd1w" contents="_XLSxEZymEeidvNSp4_jd1w"/>
+  <LogicalDataModel:Entity xmi:id="_XLSxEZymEeidvNSp4_jd1w" name="Entity1" package="_XLSxEJymEeidvNSp4_jd1w">
+    <attributes xmi:id="_XLSxEpymEeidvNSp4_jd1w" name="Attribute2" dataType="CHAR(5)"/>
+    <attributes xmi:id="_XLSxE5ymEeidvNSp4_jd1w" name="Attribute3" dataType="CHAR(5)"/>
+    <attributes xmi:id="_XLSxFJymEeidvNSp4_jd1w" name="Attribute1" dataType="CHAR(5)"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Package xmi:id="_XLSxFZymEeidvNSp4_jd1w" name="PredefinedDatatypes" namespaceSupported="true" parent="_XLSxEJymEeidvNSp4_jd1w"/>
+  <LogicalDataModel:Package xmi:id="_XLSxFpymEeidvNSp4_jd1w" name="SpecificDatatypes" namespaceSupported="true" parent="_XLSxEJymEeidvNSp4_jd1w"/>
+</xmi:XMI>

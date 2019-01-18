@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.9.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:NetezzaModel="http:///com/ibm/db/models/netezza/netezza.ecore" xmlns:SQLDataTypes="http:///org/eclipse/datatools/modelbase/sql/datatypes.ecore">
+  <NetezzaModel:NetezzaDatabase xmi:id="_41k1AF0ZEeiCFYmcDbA_MA" name="Database" vendor="Netezza" version="7.x" schemas="_44uPoF0ZEeiCFYmcDbA_MA"/>
+  <NetezzaModel:NetezzaSchema xmi:id="_44uPoF0ZEeiCFYmcDbA_MA" name="Schema" tables="_45QbIF0ZEeiCFYmcDbA_MA" database="_41k1AF0ZEeiCFYmcDbA_MA"/>
+  <NetezzaModel:NetezzaTable xmi:id="_45QbIF0ZEeiCFYmcDbA_MA" name="ENTITY1" schema="_44uPoF0ZEeiCFYmcDbA_MA">
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_45QbIV0ZEeiCFYmcDbA_MA" name="ATTRIBUTE1" defaultValue="">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_45QbIl0ZEeiCFYmcDbA_MA" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_45QbI10ZEeiCFYmcDbA_MA" name="ATTRIBUTE2" defaultValue="">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_45QbJF0ZEeiCFYmcDbA_MA" name="CHAR" length="5"/>
+    </columns>
+    <columns xsi:type="NetezzaModel:NetezzaColumn" xmi:id="_w7Ip0F0gEeibfd2lPEI8cQ" name="ATTRIBUTE4" description="This is test on 21st May 2018" nullable="false" defaultValue="">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_w7Ip0V0gEeibfd2lPEI8cQ" name="CHAR" length="5"/>
+    </columns>
+    <constraints xsi:type="NetezzaModel:NetezzaPrimaryKey" xmi:id="_w-wlkF0gEeibfd2lPEI8cQ" name="ENTITY1_PK" members="_w7Ip0F0gEeibfd2lPEI8cQ"/>
+    <distributionKey xmi:id="_45QbJV0ZEeiCFYmcDbA_MA" distributeOn="RANDOM"/>
+  </NetezzaModel:NetezzaTable>
+</xmi:XMI>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<!--IBM InfoSphere Data Architect 9.1.4.0-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.mmi.ui.signatures.diagram" version="7.0.0"><feature description="" name="Rational Modeling Platform (com.ibm.xtools.rmp)" url="" version="7.0.0"/></signature>?>
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.uml.msl.model" version="7.0.0"><feature description="" name="com.ibm.xtools.ruml.feature" url="" version="7.0.0"/></signature>?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Default="http:///schemas/Default/_fNm3AAqoEd6-N_NOT9vsCA/2" xmlns:LogicalDataModel="http:///schemas/LogicalDataModel/_J8OmELGhEeG1SJMffn5f5A/95" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/Default/_fNm3AAqoEd6-N_NOT9vsCA/2 pathmap://UML2_MSL_PROFILES/Default.epx#_fNwoAAqoEd6-N_NOT9vsCA?Default/Default? http:///schemas/LogicalDataModel/_J8OmELGhEeG1SJMffn5f5A/95 pathmap://TRANSFORM_LDM_PROFILES/LogicalDataModel.epx#_J8OmEbGhEeG1SJMffn5f5A?LogicalDataModel/LogicalDataModel?">
+  <uml:Model xmi:id="_3OWKIJpyEeiNwswTC2KDog" name="Package1">
+    <ownedComment xmi:id="_3OWKIZpyEeiNwswTC2KDog" annotatedElement="_3OWKIJpyEeiNwswTC2KDog">
+      <body xsi:nil="true"/>
+    </ownedComment>
+    <packagedElement xmi:type="uml:Package" xmi:id="_3OWKIppyEeiNwswTC2KDog" name="PredefinedDatatypes">
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_3OWKI5pyEeiNwswTC2KDog" name="Boolean"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_3OWKJJpyEeiNwswTC2KDog" name="Byte"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_3OWKJZpyEeiNwswTC2KDog" name="Currency"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_3OWKJppyEeiNwswTC2KDog" name="Date"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_3OWKJ5pyEeiNwswTC2KDog" name="Decfloat"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_3OWKKJpyEeiNwswTC2KDog" name="Double"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_3OWKKZpyEeiNwswTC2KDog" name="Integer"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_3OWKKppyEeiNwswTC2KDog" name="Interval"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_3OWKK5pyEeiNwswTC2KDog" name="Long"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_3OWKLJpyEeiNwswTC2KDog" name="Long Varbinary"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_3OWKLZpyEeiNwswTC2KDog" name="Long Varchar"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_3OWKLppyEeiNwswTC2KDog" name="Nclob"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_3OWKL5pyEeiNwswTC2KDog" name="Real"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_3OWKMJpyEeiNwswTC2KDog" name="Rowid"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_3OWKMZpyEeiNwswTC2KDog" name="Rowversion"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_3OWKMppyEeiNwswTC2KDog" name="Serial"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_3OWKM5pyEeiNwswTC2KDog" name="Short"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_3OWKNJpyEeiNwswTC2KDog" name="Time"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_3OWKNZpyEeiNwswTC2KDog" name="Timestamp"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_3OWKNppyEeiNwswTC2KDog" name="Tiny"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_3OWKN5pyEeiNwswTC2KDog" name="XML"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_3OWKOJpyEeiNwswTC2KDog" name="Entity1">
+      <ownedComment xmi:id="_3OWKOZpyEeiNwswTC2KDog" annotatedElement="_3OWKOJpyEeiNwswTC2KDog">
+        <body xsi:nil="true"/>
+      </ownedComment>
+      <ownedAttribute xmi:id="_3OWKOppyEeiNwswTC2KDog" name="Attribute2" type="_3OWKQZpyEeiNwswTC2KDog">
+        <ownedComment xmi:id="_3OWKO5pyEeiNwswTC2KDog" annotatedElement="_3OWKOppyEeiNwswTC2KDog">
+          <body xsi:nil="true"/>
+        </ownedComment>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_3OWKPJpyEeiNwswTC2KDog" name="Attribute3" type="_3OWKQZpyEeiNwswTC2KDog">
+        <ownedComment xmi:id="_3OWKPZpyEeiNwswTC2KDog" annotatedElement="_3OWKPJpyEeiNwswTC2KDog">
+          <body xsi:nil="true"/>
+        </ownedComment>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_3OWKPppyEeiNwswTC2KDog" name="Attribute1" type="_3OWKQZpyEeiNwswTC2KDog">
+        <ownedComment xmi:id="_3OWKP5pyEeiNwswTC2KDog" annotatedElement="_3OWKPppyEeiNwswTC2KDog">
+          <body xsi:nil="true"/>
+        </ownedComment>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_3OWKQJpyEeiNwswTC2KDog" name="SpecificDatatypes">
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_3OWKQZpyEeiNwswTC2KDog" name="CHAR(5)"/>
+    </packagedElement>
+    <profileApplication xmi:id="_3OWKQppyEeiNwswTC2KDog">
+      <eAnnotations xmi:id="_3OWKQ5pyEeiNwswTC2KDog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://TRANSFORM_LDM_PROFILES/LogicalDataModel.epx#_J8OmEbGhEeG1SJMffn5f5A?LogicalDataModel/LogicalDataModel?"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://TRANSFORM_LDM_PROFILES/LogicalDataModel.epx#_pEMyMKLSEdqRXLEkHnuHoQ?LogicalDataModel?"/>
+    </profileApplication>
+    <profileApplication xmi:id="_3OWKRJpyEeiNwswTC2KDog">
+      <eAnnotations xmi:id="_3OWKRZpyEeiNwswTC2KDog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_3OWKRppyEeiNwswTC2KDog">
+      <eAnnotations xmi:id="_3OWKR5pyEeiNwswTC2KDog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Default.epx#_fNwoAAqoEd6-N_NOT9vsCA?Default/Default?"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML2_MSL_PROFILES/Default.epx#_a_S3wNWLEdiy4IqP8whjFA?Default?"/>
+    </profileApplication>
+    <profileApplication xmi:id="_3OWKSJpyEeiNwswTC2KDog">
+      <eAnnotations xmi:id="_3OWKSZpyEeiNwswTC2KDog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_4OVBUD0TEeKt-L0gyEptgQ?Deployment/Deployment?"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_vjbuwOvHEdiDX5bji0iVSA?Deployment?"/>
+    </profileApplication>
+  </uml:Model>
+  <Default:Documentation xmi:id="_3OWKSppyEeiNwswTC2KDog" base_Comment="_3OWKIZpyEeiNwswTC2KDog"/>
+  <LogicalDataModel:Annotation xmi:id="_3OWKS5pyEeiNwswTC2KDog" Contents="" base_Package="_3OWKIJpyEeiNwswTC2KDog"/>
+  <LogicalDataModel:Entity xmi:id="_3OWKTJpyEeiNwswTC2KDog" base_Class="_3OWKOJpyEeiNwswTC2KDog" PhysicalName=""/>
+  <Default:Documentation xmi:id="_3OWKTZpyEeiNwswTC2KDog" base_Comment="_3OWKOZpyEeiNwswTC2KDog"/>
+  <LogicalDataModel:Annotation xmi:id="_3OWKTppyEeiNwswTC2KDog" Contents="" base_Class="_3OWKOJpyEeiNwswTC2KDog"/>
+  <Default:Documentation xmi:id="_3OWKT5pyEeiNwswTC2KDog" base_Comment="_3OWKO5pyEeiNwswTC2KDog"/>
+  <LogicalDataModel:Annotation xmi:id="_3OWKUJpyEeiNwswTC2KDog" Contents="" base_Property="_3OWKOppyEeiNwswTC2KDog"/>
+  <LogicalDataModel:Attribute xmi:id="_3OWKUZpyEeiNwswTC2KDog" base_Property="_3OWKOppyEeiNwswTC2KDog" PhysicalName=""/>
+  <Default:Documentation xmi:id="_3OX_UJpyEeiNwswTC2KDog" base_Comment="_3OWKPZpyEeiNwswTC2KDog"/>
+  <LogicalDataModel:Annotation xmi:id="_3OX_UZpyEeiNwswTC2KDog" Contents="" base_Property="_3OWKPJpyEeiNwswTC2KDog"/>
+  <LogicalDataModel:Attribute xmi:id="_3OX_UppyEeiNwswTC2KDog" base_Property="_3OWKPJpyEeiNwswTC2KDog" PhysicalName=""/>
+  <Default:Documentation xmi:id="_3OX_U5pyEeiNwswTC2KDog" base_Comment="_3OWKP5pyEeiNwswTC2KDog"/>
+  <LogicalDataModel:Annotation xmi:id="_3OX_VJpyEeiNwswTC2KDog" Contents="" base_Property="_3OWKPppyEeiNwswTC2KDog"/>
+  <LogicalDataModel:Attribute xmi:id="_3OX_VZpyEeiNwswTC2KDog" base_Property="_3OWKPppyEeiNwswTC2KDog" PhysicalName=""/>
+</xmi:XMI>

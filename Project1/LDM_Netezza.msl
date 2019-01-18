@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.9.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:LogicalDataModel="http:///com/ibm/db/models/logical/logical.ecore" xmlns:datanotation="http:///datanotation.ecore" xmlns:ilvglnotation="http://www.ilog.com/views/8.5.0/LayoutNotationExtensionDefinition" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <LogicalDataModel:Package xmi:id="_xDTD0I9TEeilj5Wx98KPcg" name="Package1" targetNamespace="LDM_Netezza.ldm" namespaceSupported="true" contents="_yu_woI9TEeilj5Wx98KPcg">
+    <eAnnotations xmi:id="_xDTD0Y9TEeilj5Wx98KPcg" source="diagram">
+      <contents xsi:type="datanotation:DataDiagram" xmi:id="_xDTD0o9TEeilj5Wx98KPcg" type="IE_CrowFoot" name="Diagram1" viewKind="ProjectExplorer" notation="IE_CrowFoot">
+        <eAnnotations xmi:id="_xDTD049TEeilj5Wx98KPcg" source="Diagram_State">
+          <details xmi:id="_xDTD1I9TEeilj5Wx98KPcg" key="Diagram_State_Value" value="true"/>
+        </eAnnotations>
+        <styles xsi:type="datanotation:DataAttributeStyle" xmi:id="_xDTD1Y9TEeilj5Wx98KPcg"/>
+        <styles xsi:type="datanotation:DataCompartmentStyle" xmi:id="_xDTD1o9TEeilj5Wx98KPcg"/>
+        <styles xsi:type="datanotation:DataDisplayStyle" xmi:id="_xDTD149TEeilj5Wx98KPcg"/>
+        <styles xsi:type="datanotation:DataDiagramRelationshipStyle" xmi:id="_xDTD2I9TEeilj5Wx98KPcg"/>
+        <styles xsi:type="datanotation:DataShapeNameStyle" xmi:id="_xDTD2Y9TEeilj5Wx98KPcg"/>
+        <styles xsi:type="datanotation:DataDiagramFormattingStyle" xmi:id="_xDTD2o9TEeilj5Wx98KPcg"/>
+        <styles xsi:type="datanotation:ConnectionLayerStyle" xmi:id="_xDTD249TEeilj5Wx98KPcg"/>
+        <styles xsi:type="notation:FilteringStyle" xmi:id="_xDTD3I9TEeilj5Wx98KPcg"/>
+        <styles xsi:type="notation:SortingStyle" xmi:id="_xDTD3Y9TEeilj5Wx98KPcg" sortingKeys="Natural:Ascending"/>
+        <styles xsi:type="ilvglnotation:LayoutStyle" xmi:id="_xDTD3o9TEeilj5Wx98KPcg" graphLayoutConfiguration="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;java version=&quot;1.8.0&quot; class=&quot;java.beans.XMLDecoder&quot;>&#xA; &lt;object class=&quot;java.util.HashMap&quot;>&#xA;  &lt;void method=&quot;put&quot;>&#xA;   &lt;string>layout&lt;/string>&#xA;   &lt;string>ilog.views.eclipse.graphlayout.runtime.hierarchical.IlvHierarchicalLayout&lt;/string>&#xA;  &lt;/void>&#xA;  &lt;void method=&quot;put&quot;>&#xA;   &lt;string>globalLinkStyle&lt;/string>&#xA;   &lt;int>2&lt;/int>&#xA;  &lt;/void>&#xA;  &lt;void method=&quot;put&quot;>&#xA;   &lt;string>flowDirection&lt;/string>&#xA;   &lt;int>4&lt;/int>&#xA;  &lt;/void>&#xA;  &lt;void method=&quot;put&quot;>&#xA;   &lt;string>levelingStrategy&lt;/string>&#xA;   &lt;int>1&lt;/int>&#xA;  &lt;/void>&#xA;  &lt;void method=&quot;put&quot;>&#xA;   &lt;string>horizontalNodeLinkOffset&lt;/string>&#xA;   &lt;float>500.0&lt;/float>&#xA;  &lt;/void>&#xA;  &lt;void method=&quot;put&quot;>&#xA;   &lt;string>horizontalLinkOffset&lt;/string>&#xA;   &lt;float>150.0&lt;/float>&#xA;  &lt;/void>&#xA;  &lt;void method=&quot;put&quot;>&#xA;   &lt;string>levelJustification&lt;/string>&#xA;   &lt;int>16&lt;/int>&#xA;  &lt;/void>&#xA;  &lt;void method=&quot;put&quot;>&#xA;   &lt;string>horizontalNodeOffset&lt;/string>&#xA;   &lt;float>1000.0&lt;/float>&#xA;  &lt;/void>&#xA;  &lt;void method=&quot;put&quot;>&#xA;   &lt;string>verticalLinkOffset&lt;/string>&#xA;   &lt;float>150.0&lt;/float>&#xA;  &lt;/void>&#xA;  &lt;void method=&quot;put&quot;>&#xA;   &lt;string>verticalNodeLinkOffset&lt;/string>&#xA;   &lt;float>500.0&lt;/float>&#xA;  &lt;/void>&#xA;  &lt;void method=&quot;put&quot;>&#xA;   &lt;string>verticalNodeOffset&lt;/string>&#xA;   &lt;float>1000.0&lt;/float>&#xA;  &lt;/void>&#xA; &lt;/object>&#xA;&lt;/java>&#xA;" linkLayoutConfiguration="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;java version=&quot;1.8.0&quot; class=&quot;java.beans.XMLDecoder&quot;>&#xA; &lt;object class=&quot;java.util.HashMap&quot;/>&#xA;&lt;/java>&#xA;" labelLayoutConfiguration="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;java version=&quot;1.8.0&quot; class=&quot;java.beans.XMLDecoder&quot;>&#xA; &lt;object class=&quot;java.util.HashMap&quot;/>&#xA;&lt;/java>&#xA;"/>
+      </contents>
+    </eAnnotations>
+  </LogicalDataModel:Package>
+  <LogicalDataModel:Entity xmi:id="_yu_woI9TEeilj5Wx98KPcg" name="Entity1" package="_xDTD0I9TEeilj5Wx98KPcg">
+    <attributes xmi:id="_zWDwoI9TEeilj5Wx98KPcg" name="Attribute1" dataType="CHAR(5)" required="true"/>
+    <attributes xmi:id="_1pNfAI9TEeilj5Wx98KPcg" name="Attribute2" dataType="CHAR(5)"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_ztojII9TEeilj5Wx98KPcg" name="Entity1_PK" attributes="_zWDwoI9TEeilj5Wx98KPcg"/>
+  </LogicalDataModel:Entity>
+</xmi:XMI>

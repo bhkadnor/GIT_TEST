@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<msl:mappingRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:msl="http:///com/ibm/datatools/metadata/mapping/model/model.ecore" scenario="com.ibm.datatools.metadata.mapping.scenario.rdb" generate_SQL="false" xmiIdUpgraded="true">
+  <msl:mapping id="_2xBH0HpbEeieosU-d4zNSw">
+    <msl:mapping id="_F4J-8IX1EeiAhutWwZwN9g">
+      <msl:annotations key="Rule1" value="MP03"/>
+      <msl:annotations key="Rule2" value="Create a new instance every day"/>
+      <msl:output name="_path85" path="$_resource0/Data Concept Facts/Arrangements Facts/Credit Card Arrangement Daily Snapshot Fact/Calendar Date Dimension Id" pathXmiId="_wA1r8HpEEeis8ddVoht7_A"/>
+    </msl:mapping>
+    <msl:mapping id="_LzhKIIX1EeiAhutWwZwN9g">
+      <msl:annotations key="Rule1" value="The Id of the &lt;Credit Card Arrangement> for which the latest version of the matching &lt;Credit Card Arrangement Dimension> will be used."/>
+      <msl:input name="_path86" path="$_resource1/Atomic Entities/Arrangement/Credit Card Arrangement/Credit Card Arrangement Id" pathXmiId="_29UObSVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path87" path="$_resource0/Data Concept Facts/Arrangements Facts/Credit Card Arrangement Daily Snapshot Fact/Credit Card Arrangement Dimension Id" pathXmiId="_w5d9FHpEEeis8ddVoht7_A"/>
+    </msl:mapping>
+    <msl:mapping id="_uKC48IX2EeiAhutWwZwN9g">
+      <msl:annotations key="Rule1" value="If the &lt;Credit Card Arrangement Summary>.Summary Cutoff Date of the &lt;Credit Card Arrangement> being worked on is the date of the day for which the instance of the &lt;Credit Card Arrangement Daily Snapshot> is being created, then set the Cutoff Date Flag DD to 'True'. Set the flag to False otherwise."/>
+      <msl:input name="_path91" path="$_resource1/Atomic Entities/Arrangement/Credit Card Arrangement/Credit Card Arrangement Id" pathXmiId="_29UObSVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path92" path="$_resource1/Summary Profile and Feedback/Summary/Credit Card Arrangement Summary/Credit Card Arrangement Id" pathXmiId="_3CFZmyVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path93" path="$_resource1/Summary Profile and Feedback/Summary/Credit Card Arrangement Summary/Summary Cutoff Date" pathXmiId="_tTTVoG_mEeiVV6fjcfjqOQ"/>
+      <msl:output name="_path94" path="$_resource0/Data Concept Facts/Arrangements Facts/Credit Card Arrangement Daily Snapshot Fact/CutOff Date Flag DD" pathXmiId="_JJZqoIPvEeil_fFVoh1shA"/>
+    </msl:mapping>
+    <msl:mapping id="_LAnJsIX5EeiAhutWwZwN9g">
+      <msl:annotations key="Rule1" value="Populate the target field with the &lt;Accounting Unit Balance>.Net Amount from the balance instance whose date (obtained from Measurement Period Id) matches the day of the snapshot being created AND whose Accounting Unit Id matches the Id of the &lt;Account Arrangement>.Balance Accounting Unit Id for the &lt;Credit Card Arrangement> being loaded."/>
+      <msl:input name="_path98" path="$_resource1/Atomic Entities/Classification/Accounting Unit/Accounting Unit Id" pathXmiId="_2iDOvSVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path99" path="$_resource1/Atomic Entities/Classification/Accounting Unit/Accounting Unit Balance Derivation Type Id" pathXmiId="_2iMYmyVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path100" path="$_resource1/Atomic Entities/Classification/Accounting Unit Balance/Accounting Unit Id" pathXmiId="_20rPsiVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path101" path="$_resource1/Atomic Entities/Classification/Accounting Unit Balance/Measurement Period Id" pathXmiId="__-Be4JNSEd-fypgoVzpBjA"/>
+      <msl:input name="_path102" path="$_resource1/Atomic Entities/Classification/Accounting Unit Balance/Net Amount" pathXmiId="_200ZvCVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path106" path="$_resource1/Atomic Entities/Arrangement/Account Arrangement/Balance Accounting Unit Id" pathXmiId="_29KdUyVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path107" path="$_resource1/Atomic Entities/Classification/Measurement Period/Measurement Period Id" pathXmiId="_21RFriVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path108" path="$_resource1/Atomic Entities/Classification/Measurement Period/Calendar Date" pathXmiId="_-S0ekHsaEeibtbdOxIYJOg"/>
+      <msl:output name="_path103" path="$_resource0/Data Concept Facts/Arrangements Facts/Credit Card Arrangement Daily Snapshot Fact/Drawn Balance" pathXmiId="_F7HboIPtEeil_fFVoh1shA"/>
+    </msl:mapping>
+    <msl:mapping id="_y0W0MInhEeiLgp7XDrhl1w">
+      <msl:annotations key="Rule1" value="Populate the target Field with the SUM of &lt;Credit Card Arrangement Summary>.Total Promotion Accrued Interest Amount and &lt;Credit Card Arrangement Summary>.Total Interest Accrued on Credit Balance from the &lt;Credit Card Arrangement Summary> instance whose Credit Card Arrangement Id matches the Credit Card Arrangement being loaded AND where &lt;Credit Card Arrangement Summary>.Summary Cutoff Date represents a date matching the target's date (as represented by Calendar Date Dimrension Id) "/>
+      <msl:input name="_path88" path="$_resource1/Atomic Entities/Arrangement/Credit Card Arrangement/Credit Card Arrangement Id" pathXmiId="_29UObSVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path109" path="$_resource1/Summary Profile and Feedback/Summary/Credit Card Arrangement Summary/Credit Card Arrangement Id" pathXmiId="_3CFZmyVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path110" path="$_resource1/Summary Profile and Feedback/Summary/Credit Card Arrangement Summary/Total Interest Accrued On Credit Balance" pathXmiId="_3CFaAyVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path111" path="$_resource1/Summary Profile and Feedback/Summary/Credit Card Arrangement Summary/Summary Cutoff Date" pathXmiId="_tTTVoG_mEeiVV6fjcfjqOQ"/>
+      <msl:input name="_path112" path="$_resource1/Summary Profile and Feedback/Summary/Credit Card Arrangement Summary/Total Promotion Accrued Interest Amount" pathXmiId="_LeADYHStEeiyXJGglJxAqQ"/>
+      <msl:output name="_path113" path="$_resource0/Data Concept Facts/Arrangements Facts/Credit Card Arrangement Daily Snapshot Fact/Accrued Interest Receivable" pathXmiId="_Fg4WsIPtEeil_fFVoh1shA"/>
+    </msl:mapping>
+    <msl:mapping id="_-dpykInhEeiLgp7XDrhl1w">
+      <msl:annotations key="Rule1" value="Populate the target field with the &lt;Arrangement / Limit Type Rltnp>.Limit Amount where &lt;Arrangement / Limit Type Rltnp>.Arrangement Id matches the &lt;Credit Card Arrangement>.Credit Card arrangement id AND &lt;Arrangement / Limit Type Rltnp>.Limit type Id matches a &lt;Classification Value>.Id whose name = &quot;Limite de Credito del Contrato&quot;"/>
+      <msl:input name="_path115" path="$_resource1/Atomic Entities/Associatives/Arrangement &amp;&amp;&amp; Limit Type Rltnp/Limit Amount" pathXmiId="_3KbdkyVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path117" path="$_resource1/Atomic Entities/Associatives/Arrangement &amp;&amp;&amp; Limit Type Rltnp/Limit Type Id" pathXmiId="_3KbddyVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path118" path="$_resource1/Atomic Entities/Associatives/Arrangement &amp;&amp;&amp; Limit Type Rltnp/Arrangement Id" pathXmiId="_3KbdcyVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path119" path="$_resource1/Atomic Entities/Associatives/Arrangement &amp;&amp;&amp; Limit Type Rltnp/Effective Date" pathXmiId="_3KbdgyVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path120" path="$_resource1/Atomic Entities/Associatives/Arrangement &amp;&amp;&amp; Limit Type Rltnp/End Date" pathXmiId="_3KbdnyVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path121" path="$_resource1/Atomic Entities/Arrangement/Credit Card Arrangement/Credit Card Arrangement Id" pathXmiId="_29UObSVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path122" path="$_resource1/Atomic Entities/Classification Hierarchy/Limit Type/Limit Type Id" pathXmiId="_3KbdaSVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path124" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value/Classification Id" pathXmiId="_2m9j7SVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path125" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value/Classification Name" pathXmiId="_2nRF1iVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path116" path="$_resource0/Data Concept Facts/Arrangements Facts/Credit Card Arrangement Daily Snapshot Fact/Credit Limit" pathXmiId="_Rh1vEIRZEeiXvbwM7pTNdA"/>
+    </msl:mapping>
+    <msl:mapping id="_2OQ9YIowEeiLgp7XDrhl1w">
+      <msl:annotations key="Rule1" value="Populate the target field with the Id of the Credit Card Arrangement Mini Dimension whose combination of attribute values (LC Status, reason, first purchase flg...) matches the ones associated with the rrangement being loaded"/>
+      <msl:annotations key="Rule3" value="The value of the &quot;Credit card First Purchase&quot; attribute is determined as follows : IF the &lt;Finance Service Arrangement>.First Disbursement Date is equal or older than the target snapshot date, the flag  value is 'TRUE', otherwise it is False."/>
+      <msl:annotations key="Rule4" value="The value of the &quot;LifeCycle Status Code&quot; attribute is determined as follows : It is the value of the &lt;Classification Value>.Classification Code whose Id matches the &lt;Arrangement Lifecycle Status>.Classification Id where &lt;Arrangement Lifecycle Status>.Arrangement Id matches the Id of the &lt;Credit Card Arrangement> being loaded and where the target snapshot date is within &lt;Arrangement Lifecycle Status>.Effective Date (included) and .End Date (excluded)"/>
+      <msl:annotations key="Rule6" value="The value of the &quot;LifeCycle Status Reason Code&quot; attribute is determined as follows : It is the value of the &lt;Classification Value>.Classification Code whose Id matches the &lt;Arrangement Lifecycle Status>.Arrangement Lifecycle Status Reason Type Id where &lt;Arrangement Lifecycle Status>.Arrangement Id matches the Id of the &lt;Credit Card Arrangement> being loaded and where the target snapshot date is within &lt;Arrangement Lifecycle Status>.Effective Date (included) and .End Date (excluded)"/>
+      <msl:annotations key="Rule5" value="The value of the &quot;LifeCycle Status Name&quot; attribute does not need to be determined as it follows the corresponding Code and is oly included for UI purposes"/>
+      <msl:annotations key="Rule7" value="The value of the &quot;LifeCycle Status Reason Name&quot; attribute does not need to be determined as it follows the corresponding Code and is oly included for UI purposes"/>
+      <msl:annotations key="Rule2" value="The value of the &quot;Credit Card First Activation Flag&quot; attribute is determined as follows : The flag is set to TRUE if the &lt;Resource Item Lifecycle Status>.Effective Date of the association between ANY of the &lt;Payment Cards> associated with the &lt;Credit card Arrangement> and a &lt;Resource Item Lifecycle Status Type> that is &quot;Active&quot; is equal to or earlier than the target snapshot date. Otherwise the flag is FALSE"/>
+      <msl:input name="_path135" path="$_resource1/Atomic Entities/Arrangement/Arrangement/Effective Date" pathXmiId="_2qFwUSVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path137" path="$_resource1/Atomic Entities/Associatives/Arrangement &amp;&amp;&amp; Classification Rltnp/Arrangement Id" pathXmiId="_24QIUyVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path138" path="$_resource1/Atomic Entities/Associatives/Arrangement &amp;&amp;&amp; Classification Rltnp/Classification Id" pathXmiId="_24QIdyVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path139" path="$_resource1/Atomic Entities/Associatives/Arrangement &amp;&amp;&amp; Classification Rltnp/Effective Date" pathXmiId="_24QIXyVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path140" path="$_resource1/Atomic Entities/Associatives/Arrangement &amp;&amp;&amp; Classification Rltnp/End Date" pathXmiId="_24ZSEyVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path141" path="$_resource1/Atomic Entities/Associatives/Arrangement Life Cycle Status/Arrangement Life Cycle Status Reason Type Id" pathXmiId="_lnvK0OVNEdy5v785b4KVYQ"/>
+      <msl:input name="_path142" path="$_resource1/Atomic Entities/Classification Hierarchy/Arrangement Life Cycle Status Type/Arrangement Life Cycle Status Type Id" pathXmiId="_2utxsSVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path143" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value/Classification Name" pathXmiId="_2nRF1iVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path144" path="$_resource1/Atomic Entities/Associatives/Arrangement &amp;&amp;&amp; Resource Item Rltnp/Arrangement Id" pathXmiId="_3N2k5iVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path145" path="$_resource1/Atomic Entities/Associatives/Arrangement &amp;&amp;&amp; Resource Item Rltnp/Resource Item Id" pathXmiId="_3N2k6iVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path146" path="$_resource1/Atomic Entities/Associatives/Arrangement &amp;&amp;&amp; Resource Item Rltnp/Arrangement &amp;&amp;&amp; Resource Item Rltnp Type Id" pathXmiId="_3N2k7iVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path147" path="$_resource1/Atomic Entities/Associatives/Arrangement &amp;&amp;&amp; Resource Item Rltnp/Effective Date" pathXmiId="_3N2k8iVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path148" path="$_resource1/Atomic Entities/Associatives/Arrangement &amp;&amp;&amp; Resource Item Rltnp/End Date" pathXmiId="_3N2lBiVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path149" path="$_resource1/Atomic Entities/Associatives/Resource Item &amp;&amp;&amp; Classification Rltnp/Resource Item Id" pathXmiId="_3FEcVyVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path150" path="$_resource1/Atomic Entities/Associatives/Resource Item &amp;&amp;&amp; Classification Rltnp/Classification Id" pathXmiId="_3FEcdyVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path151" path="$_resource1/Atomic Entities/Associatives/Resource Item &amp;&amp;&amp; Classification Rltnp/Resource Item &amp;&amp;&amp; Classification Rltnp Type Id" pathXmiId="_3FEcXyVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path152" path="$_resource1/Atomic Entities/Associatives/Resource Item &amp;&amp;&amp; Classification Rltnp/Effective Date" pathXmiId="_3FEcYyVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path153" path="$_resource1/Atomic Entities/Associatives/Resource Item &amp;&amp;&amp; Classification Rltnp/End Date" pathXmiId="_3FEceyVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path154" path="$_resource1/Atomic Entities/Classification Hierarchy/Resource Item Life Cycle Status Type/Resource Item Life Cycle Status Type Id" pathXmiId="_3FNmEiVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path155" path="$_resource1/Atomic Entities/Arrangement/Finance Service Arrangement/First Disbursement Date" pathXmiId="_3BC4ACVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path157" path="$_resource1/Atomic Entities/Associatives/Resource Item Life Cycle Status/Resource Item Id" pathXmiId="_3Ru_XiVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path158" path="$_resource1/Atomic Entities/Associatives/Resource Item Life Cycle Status/Resource Item &amp;&amp;&amp; Classification Rltnp Type Id" pathXmiId="_3R4JEyVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path159" path="$_resource1/Atomic Entities/Associatives/Resource Item Life Cycle Status/Effective Date" pathXmiId="_3R4JFyVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path160" path="$_resource1/Atomic Entities/Associatives/Resource Item Life Cycle Status/Classification Id" pathXmiId="_eDupIGQqEeiDuO8Rmig63g"/>
+      <msl:output name="_path136" path="$_resource0/Data Concept Facts/Arrangements Facts/Credit Card Arrangement Daily Snapshot Fact/Credit Card Arrangement Mini Dimension Id" pathXmiId="_xsLzdHpEEeis8ddVoht7_A"/>
+    </msl:mapping>
+    <msl:input name="_path0" path="$_resource1/Atomic Entities/Arrangement/Credit Card Arrangement" pathXmiId="_29UOaCVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path89" path="$_resource1/Atomic Entities/Associatives/Arrangement &amp;&amp;&amp; Limit Type Rltnp" pathXmiId="_3KbdbSVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path90" path="$_resource1/Atomic Entities/Classification Hierarchy/Limit Type" pathXmiId="_3KbdYyVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path95" path="$_resource1/Atomic Entities/Classification/Accounting Unit" pathXmiId="_2iDOtyVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path96" path="$_resource1/Atomic Entities/Classification/Accounting Unit Balance" pathXmiId="_20he9SVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path97" path="$_resource1/Atomic Entities/Classification Hierarchy/Accounting Unit Balance Derivation Type" pathXmiId="_2naPyiVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path104" path="$_resource1/Atomic Entities/Classification/Measurement Period" pathXmiId="_21RFqCVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path105" path="$_resource1/Atomic Entities/Arrangement/Account Arrangement" pathXmiId="_29BTmSVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path114" path="$_resource1/Summary Profile and Feedback/Summary/Credit Card Arrangement Summary" pathXmiId="_3CFZliVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path123" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value" pathXmiId="_2m9j5yVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path126" path="$_resource1/Atomic Entities/Arrangement/Arrangement" pathXmiId="_2pDOgyVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path127" path="$_resource1/Atomic Entities/Arrangement/Finance Service Arrangement" pathXmiId="_3AmL4yVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path128" path="$_resource1/Atomic Entities/Associatives/Arrangement &amp;&amp;&amp; Classification Rltnp" pathXmiId="_24QITSVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path129" path="$_resource1/Atomic Entities/Associatives/Arrangement Life Cycle Status" pathXmiId="_2utxtSVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path130" path="$_resource1/Atomic Entities/Associatives/Arrangement &amp;&amp;&amp; Resource Item Rltnp" pathXmiId="_3N2k4CVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path131" path="$_resource1/Atomic Entities/Classification Hierarchy/Arrangement Life Cycle Status Reason Type" pathXmiId="_2utxoSVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path132" path="$_resource1/Atomic Entities/Classification Hierarchy/Arrangement Life Cycle Status Type" pathXmiId="_2utxqyVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path133" path="$_resource1/Atomic Entities/Associatives/Resource Item &amp;&amp;&amp; Classification Rltnp" pathXmiId="_3FEcUSVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path134" path="$_resource1/Atomic Entities/Classification Hierarchy/Resource Item Life Cycle Status Type" pathXmiId="_3FEcfyVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path156" path="$_resource1/Atomic Entities/Associatives/Resource Item Life Cycle Status" pathXmiId="_3Ru_WCVlEdyPG407Qktk6Q"/>
+    <msl:output name="_path1" path="$_resource0/Data Concept Facts/Arrangements Facts/Credit Card Arrangement Daily Snapshot Fact" pathXmiId="_ALDtQHpEEeis8ddVoht7_A"/>
+  </msl:mapping>
+  <msl:mapping id="_FUvP8HpcEeieosU-d4zNSw">
+    <msl:mapping id="_IerisHsoEeibtbdOxIYJOg">
+      <msl:annotations key="Rule1" value="MP005"/>
+      <msl:input name="_path39" path="$_resource1/Atomic Entities/Arrangement/Arrangement/Unique Id In Source System" pathXmiId="_2pDOmiVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path40" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Dimension/Unique Id In Source System" pathXmiId="_qOV-8Ag8EeSfwaQrNnUc6Q"/>
+    </msl:mapping>
+    <msl:mapping id="_POrP0HsoEeibtbdOxIYJOg">
+      <msl:annotations key="Rule1" value="MP005"/>
+      <msl:input name="_path41" path="$_resource1/Atomic Entities/Arrangement/Credit Card Arrangement/Current Card Number" pathXmiId="_1TdoI3vaEeCeorsBU4q8xg"/>
+      <msl:output name="_path42" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Dimension/Card Number" pathXmiId="_i-aAwr_EEeGJWss1NE4Cvg"/>
+    </msl:mapping>
+    <msl:mapping id="_9dw9gHsoEeibtbdOxIYJOg">
+      <msl:annotations key="Rule1" value="MP005"/>
+      <msl:input name="_path46" path="$_resource1/Atomic Entities/Arrangement/Account Arrangement/Account Number" pathXmiId="_29KdcyVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path47" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Dimension/Account Number" pathXmiId="_i_Q8R7_EEeGJWss1NE4Cvg"/>
+    </msl:mapping>
+    <msl:mapping id="_HD9bsHspEeibtbdOxIYJOg">
+      <msl:annotations key="Rule1" value="MP009"/>
+      <msl:annotations key="Rule2" value="Lookup the  &lt;Organization Unit>.Organization Unit Code of the Organization Unit whose Id = &lt;Account Arrangement>.Originating Organization Unit Id  of the &lt;Credit Card Arrangement>"/>
+      <msl:input name="_path48" path="$_resource1/Atomic Entities/Arrangement/Account Arrangement/Originating Organization Unit Id" pathXmiId="_STz3oGkHEeiQ2dJRn2PdNA"/>
+      <msl:input name="_path49" path="$_resource1/Atomic Entities/Involved Party/Organization Unit/Organization Unit Id" pathXmiId="_2l7CCiVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path50" path="$_resource1/Atomic Entities/Involved Party/Organization Unit/Organization Unit Code" pathXmiId="_2mN88SVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path51" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Dimension/Originating Organization Unit Code" pathXmiId="_YPNeQHpOEeieosU-d4zNSw"/>
+    </msl:mapping>
+    <msl:mapping id="_ZxTPIHsqEeibtbdOxIYJOg">
+      <msl:annotations key="Rule1" value="MP009"/>
+      <msl:annotations key="Rule11" value="Lookup the &lt;Involved Party>.Name of the Organization Unit whose Id = &lt;Account Arrangement>.Originating Organization Unit Id  of the &lt;Credit Card Arrangement>"/>
+      <msl:input name="_path56" path="$_resource1/Atomic Entities/Arrangement/Account Arrangement/Originating Organization Unit Id" pathXmiId="_STz3oGkHEeiQ2dJRn2PdNA"/>
+      <msl:input name="_path57" path="$_resource1/Atomic Entities/Involved Party/Involved Party/Involved Party Id" pathXmiId="_2gQe4iVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path58" path="$_resource1/Atomic Entities/Involved Party/Involved Party/Involved Party Name" pathXmiId="_2g277CVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path59" path="$_resource1/Atomic Entities/Involved Party/Organization Unit/Organization Unit Id" pathXmiId="_2l7CCiVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path60" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Dimension/Originating Organization Unit Name" pathXmiId="_cWNI0HpOEeieosU-d4zNSw"/>
+    </msl:mapping>
+    <msl:mapping id="_K_QhsHsrEeibtbdOxIYJOg">
+      <msl:annotations key="Rule1" value="MP009"/>
+      <msl:annotations key="Rule2" value="Lookup the &lt;Product>.Code for the Product whose Id = &lt;Product Arrangement>.Product Id for the Credit Card Arrangement"/>
+      <msl:input name="_path61" path="$_resource1/Atomic Entities/Arrangement/Credit Card Arrangement/Credit Card Arrangement Id" pathXmiId="_29UObSVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path62" path="$_resource1/Atomic Entities/Arrangement/Product Arrangement/Product Arrangement Id" pathXmiId="_2wf6ayVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path63" path="$_resource1/Atomic Entities/Arrangement/Product Arrangement/Product Id" pathXmiId="_2wf6cyVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path64" path="$_resource1/Atomic Entities/Product/Product/Product Id" pathXmiId="_2hTnziVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path65" path="$_resource1/Atomic Entities/Product/Product/Product Code" pathXmiId="_2h5dpSVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path66" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Dimension/Product Code" pathXmiId="_8qXwFB1eEeS3p-LC5cuDzQ"/>
+    </msl:mapping>
+    <msl:mapping id="_qucQQHsrEeibtbdOxIYJOg">
+      <msl:annotations key="Rule1" value="MP009"/>
+      <msl:annotations key="Rule2" value="Lookup the &lt;Product>.Name for the Product whose Id = &lt;Product Arrangement>.Product Id for the Credit Card Arrangement"/>
+      <msl:input name="_path67" path="$_resource1/Atomic Entities/Arrangement/Credit Card Arrangement/Credit Card Arrangement Id" pathXmiId="_29UObSVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path68" path="$_resource1/Atomic Entities/Arrangement/Product Arrangement/Product Arrangement Id" pathXmiId="_2wf6ayVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path69" path="$_resource1/Atomic Entities/Arrangement/Product Arrangement/Product Id" pathXmiId="_2wf6cyVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path70" path="$_resource1/Atomic Entities/Product/Product/Product Id" pathXmiId="_2hTnziVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path71" path="$_resource1/Atomic Entities/Product/Product/Product Name" pathXmiId="_2h5dqiVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path72" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Dimension/Product Name" pathXmiId="_8qfr8B1eEeS3p-LC5cuDzQ"/>
+    </msl:mapping>
+    <msl:mapping id="_uniWwIqXEeiDLPUODiJcHA">
+      <msl:annotations key="Rule1" value="MP005"/>
+      <msl:input name="_path169" path="$_resource1/Atomic Entities/Arrangement/Account Arrangement/Account Arrangement Id" pathXmiId="_29BTnyVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path170" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Dimension/Anchor Id" pathXmiId="_i_vdfr_EEeGJWss1NE4Cvg"/>
+    </msl:mapping>
+    <msl:mapping id="_zd3XEIqYEeiDLPUODiJcHA">
+      <msl:annotations key="Rule1" value="Create new row with new surrogate Id as per SCD Type 2 when &lt;Credit Card Arrangement> information affecting the target dimension changes in the source."/>
+      <msl:input name="_path171" path="$_resource1/Atomic Entities/Arrangement/Credit Card Arrangement/Credit Card Arrangement Id" pathXmiId="_29UObSVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path172" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Dimension/Credit Card Arrangement Dimension Id" pathXmiId="_i-T6FL_EEeGJWss1NE4Cvg"/>
+    </msl:mapping>
+    <msl:mapping id="_MOQukIqZEeiDLPUODiJcHA">
+      <msl:annotations key="Rule1" value="Populated from Reference Data, derived from Organization Zone Code"/>
+      <msl:output name="_path173" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Dimension/Originating Organization Unit Division Code" pathXmiId="_Dti-wHpTEeieosU-d4zNSw"/>
+    </msl:mapping>
+    <msl:mapping id="_Vvf0QIqZEeiDLPUODiJcHA">
+      <msl:annotations key="Rule1" value="Populated from Reference Data, derived from Organization Unit Zone Code"/>
+      <msl:output name="_path174" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Dimension/Originating Organization Unit Division Name" pathXmiId="_EYBfIHpTEeieosU-d4zNSw"/>
+    </msl:mapping>
+    <msl:mapping id="_XzYXkIqZEeiDLPUODiJcHA">
+      <msl:annotations key="Rule1" value="Populated from Reference Data, derived from Organization Unit Code"/>
+      <msl:output name="_path175" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Dimension/Originating Organization Unit  Zone Code" pathXmiId="_FB5ikHpTEeieosU-d4zNSw"/>
+    </msl:mapping>
+    <msl:mapping id="_ZlAGMIqZEeiDLPUODiJcHA">
+      <msl:annotations key="Rule1" value="Populated from Reference Data, derived from Organization Unit Code"/>
+      <msl:output name="_path176" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Dimension/Originating Organization Unit Zone Name" pathXmiId="_FsOR8HpTEeieosU-d4zNSw"/>
+    </msl:mapping>
+    <msl:mapping id="_gDPU8IqZEeiDLPUODiJcHA">
+      <msl:annotations key="Rule1" value="Set to TRUE if a new instance is being created, FALSE if the instance is being superseded by a newer version with the same Anchor Id."/>
+      <msl:output name="_path177" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Dimension/Current Row Indicator" pathXmiId="_IDQYQNkhEeOq7YdiFphxxQ"/>
+    </msl:mapping>
+    <msl:mapping id="_sXqT8IqZEeiDLPUODiJcHA">
+      <msl:annotations key="Rule1" value="MP003 using the date at which the set of attribute values became valid in the source system."/>
+      <msl:output name="_path178" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Dimension/Valid From Timestamp" pathXmiId="_i_vdir_EEeGJWss1NE4Cvg"/>
+    </msl:mapping>
+    <msl:mapping id="_bgZmcIqaEeiDLPUODiJcHA">
+      <msl:annotations key="Rule1" value="MP003 using the date at which a newer instance with the same Anchor Id is being created that supersedes the current instance."/>
+      <msl:output name="_path179" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Dimension/Valid To Timestamp" pathXmiId="_i_vdjr_EEeGJWss1NE4Cvg"/>
+    </msl:mapping>
+    <msl:mapping id="_plB-0IqaEeiDLPUODiJcHA">
+      <msl:annotations key="Rule1" value="MP006"/>
+      <msl:input name="_path180" path="$_resource1/Atomic Entities/Arrangement/Arrangement/Source System Id" pathXmiId="_2pDOliVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path181" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Dimension/Source System Name" pathXmiId="_mW5zUAg8EeSfwaQrNnUc6Q"/>
+    </msl:mapping>
+    <msl:mapping id="_q578QIqaEeiDLPUODiJcHA">
+      <msl:annotations key="Rule1" value="MP007"/>
+      <msl:input name="_path182" path="$_resource1/Atomic Entities/Arrangement/Arrangement/Source System Id" pathXmiId="_2pDOliVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path183" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Dimension/Source System Code" pathXmiId="_oIQcMAg8EeSfwaQrNnUc6Q"/>
+    </msl:mapping>
+    <msl:mapping id="_tB0O8Yq_EeiDLPUODiJcHA">
+      <msl:annotations key="Rule1" value="MP007"/>
+      <msl:input path="$_resource1/Atomic Entities/Product/Product/Product Brand Id" pathXmiId="_biMEEGNnEeiDuO8Rmig63g"/>
+      <msl:input name="_path219" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value/Classification Id" pathXmiId="_2m9j7SVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path220" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value/Classification Code" pathXmiId="_2nHU6yVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path221" path="$_resource1/Atomic Entities/Classification Hierarchy/Product Brand/Product Brand Id" pathXmiId="_N77pwGNnEeiDuO8Rmig63g"/>
+      <msl:output path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Dimension/Product Brand Code" pathXmiId="_Su2H4IqzEeiDLPUODiJcHA"/>
+    </msl:mapping>
+    <msl:mapping id="_PP1-gIrAEeiDLPUODiJcHA">
+      <msl:annotations key="Rule1" value="Derived from the Code"/>
+      <msl:input name="_path222" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value/Classification Id" pathXmiId="_2m9j7SVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path223" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value/Classification Code" pathXmiId="_2nHU6yVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path224" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value/Classification Name" pathXmiId="_2nRF1iVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path225" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Dimension/Product Brand Name" pathXmiId="_VeBq8IqzEeiDLPUODiJcHA"/>
+    </msl:mapping>
+    <msl:input name="_path2" path="$_resource1/Atomic Entities/Arrangement/Credit Card Arrangement" pathXmiId="_29UOaCVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path38" path="$_resource1/Atomic Entities/Arrangement/Arrangement" pathXmiId="_2pDOgyVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path43" path="$_resource1/Atomic Entities/Arrangement/Account Arrangement" pathXmiId="_29BTmSVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path44" path="$_resource1/Atomic Entities/Arrangement/Product Arrangement" pathXmiId="_2wf6ZSVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path45" path="$_resource1/Atomic Entities/Involved Party/Organization Unit" pathXmiId="_2l7CBCVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path52" path="$_resource1/Atomic Entities/Involved Party/Involved Party" pathXmiId="_2fg4HyVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path53" path="$_resource1/Atomic Entities/Product/Product" pathXmiId="_2hTnyCVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path217" path="$_resource1/Atomic Entities/Classification Hierarchy/Product Brand" pathXmiId="_97ivUGNmEeiDuO8Rmig63g"/>
+    <msl:input name="_path218" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value" pathXmiId="_2m9j5yVlEdyPG407Qktk6Q"/>
+    <msl:output name="_path3" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Dimension" pathXmiId="_i-T6DL_EEeGJWss1NE4Cvg"/>
+  </msl:mapping>
+  <msl:mapping id="_jNKx0HsYEeibtbdOxIYJOg">
+    <msl:mapping id="_2BnvUHsYEeibtbdOxIYJOg">
+      <msl:annotations key="Rule1" value="MP005"/>
+      <msl:input name="_path14" path="$_resource1/Atomic Entities/Classification/Measurement Period/Calendar Month" pathXmiId="_21a2liVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path15" path="$_resource0/Dimensions/Classification Dimensions/Calendar Date Dimension/Calendar Month" pathXmiId="_gwTOEIe3EeCwqL2i7aWp1A"/>
+    </msl:mapping>
+    <msl:mapping id="_8xv_UHsYEeibtbdOxIYJOg">
+      <msl:annotations key="Rule1" value="MP005"/>
+      <msl:input name="_path16" path="$_resource1/Atomic Entities/Classification/Measurement Period/Calendar Month" pathXmiId="_21a2liVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path17" path="$_resource0/Dimensions/Classification Dimensions/Calendar Date Dimension/Calendar Month Name" pathXmiId="_gzE1QIe3EeCwqL2i7aWp1A"/>
+    </msl:mapping>
+    <msl:mapping id="_BdtYIHsZEeibtbdOxIYJOg">
+      <msl:annotations key="Rule1" value="MP005"/>
+      <msl:input name="_path18" path="$_resource1/Atomic Entities/Classification/Measurement Period/Calendar Quarter" pathXmiId="_21a2kSVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path19" path="$_resource0/Dimensions/Classification Dimensions/Calendar Date Dimension/Calendar Quarter" pathXmiId="_gwxvMIe3EeCwqL2i7aWp1A"/>
+    </msl:mapping>
+    <msl:mapping id="_HghPIHsZEeibtbdOxIYJOg">
+      <msl:annotations key="Rule1" value="MP005"/>
+      <msl:input name="_path22" path="$_resource1/Atomic Entities/Classification/Measurement Period/Week Of Calendar Year" pathXmiId="_21a2myVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path23" path="$_resource0/Dimensions/Classification Dimensions/Calendar Date Dimension/Calendar Week Number" pathXmiId="_t8HY4Bx2EeOFo_J7saOr1g"/>
+    </msl:mapping>
+    <msl:mapping id="_N6Up0HsZEeibtbdOxIYJOg">
+      <msl:annotations key="Rule1" value="MP005"/>
+      <msl:input name="_path24" path="$_resource1/Atomic Entities/Classification/Measurement Period/Day Of Calendar Month" pathXmiId="_21knmiVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path25" path="$_resource0/Dimensions/Classification Dimensions/Calendar Date Dimension/Day Number In Calendar Month" pathXmiId="_gxjLQIe3EeCwqL2i7aWp1A"/>
+    </msl:mapping>
+    <msl:mapping id="_Uya4IHsbEeibtbdOxIYJOg">
+      <msl:annotations key="Rule1" value="MP005"/>
+      <msl:input name="_path26" path="$_resource1/Atomic Entities/Classification/Measurement Period/Calendar Date" pathXmiId="_-S0ekHsaEeibtbdOxIYJOg"/>
+      <msl:output name="_path27" path="$_resource0/Dimensions/Classification Dimensions/Calendar Date Dimension/Calendar Date" pathXmiId="_gwHA0Ie3EeCwqL2i7aWp1A"/>
+    </msl:mapping>
+    <msl:mapping id="_eqrWsHsbEeibtbdOxIYJOg">
+      <msl:annotations key="Rule1" value="MP005"/>
+      <msl:input name="_path28" path="$_resource1/Atomic Entities/Classification/Measurement Period/Measurement Period Id" pathXmiId="_21RFriVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path29" path="$_resource0/Dimensions/Classification Dimensions/Calendar Date Dimension/Calendar Date Dimension Id" pathXmiId="_gvQFMIe3EeCwqL2i7aWp1A"/>
+    </msl:mapping>
+    <msl:mapping id="_KAE6cHscEeibtbdOxIYJOg">
+      <msl:annotations key="Rule1" value="Set to true if the row represents a day that is  used to represent the calendar month, usually the last day of the month."/>
+      <msl:output name="_path30" path="$_resource0/Dimensions/Classification Dimensions/Calendar Date Dimension/Calendar Month Row Flag" pathXmiId="_gzvjpoe3EeCwqL2i7aWp1A"/>
+    </msl:mapping>
+    <msl:mapping id="_T2ZfUHscEeibtbdOxIYJOg">
+      <msl:annotations key="Rule1" value="Set to true if the row represents a day that is the last day of the calendar quarter"/>
+      <msl:output name="_path31" path="$_resource0/Dimensions/Classification Dimensions/Calendar Date Dimension/Calendar Quarter Row Flag" pathXmiId="_gzvjo4e3EeCwqL2i7aWp1A"/>
+    </msl:mapping>
+    <msl:mapping id="_XV66MHscEeibtbdOxIYJOg">
+      <msl:annotations key="Rule1" value="Set to true if the row represents a day that is the last day of the calendar Year"/>
+      <msl:output name="_path32" path="$_resource0/Dimensions/Classification Dimensions/Calendar Date Dimension/Calendar Year Row Flag" pathXmiId="_gzvjoIe3EeCwqL2i7aWp1A"/>
+    </msl:mapping>
+    <msl:mapping id="_bRAPsHscEeibtbdOxIYJOg">
+      <msl:annotations key="Rule1" value="MP005"/>
+      <msl:input name="_path33" path="$_resource1/Atomic Entities/Classification/Measurement Period/Company Holiday Flag" pathXmiId="_22AsfiVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path34" path="$_resource0/Dimensions/Classification Dimensions/Calendar Date Dimension/Company Holiday Flag" pathXmiId="_gxW-AIe3EeCwqL2i7aWp1A"/>
+    </msl:mapping>
+    <msl:mapping id="_enbY8HscEeibtbdOxIYJOg">
+      <msl:annotations key="Rule1" value="MP005"/>
+      <msl:input name="_path35" path="$_resource1/Atomic Entities/Classification/Measurement Period/Public Holiday Flag" pathXmiId="_22AseiVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path36" path="$_resource0/Dimensions/Classification Dimensions/Calendar Date Dimension/Public Holiday Flag" pathXmiId="_gyaG4Ie3EeCwqL2i7aWp1A"/>
+    </msl:mapping>
+    <msl:mapping id="_MKPD4HsnEeibtbdOxIYJOg">
+      <msl:annotations key="Rule1" value="Set to true if the row represents a day that is the last day of the calendar month"/>
+      <msl:output name="_path37" path="$_resource0/Dimensions/Classification Dimensions/Calendar Date Dimension/Last Day In Calendar Month Flag" pathXmiId="_gyUAQIe3EeCwqL2i7aWp1A"/>
+    </msl:mapping>
+    <msl:mapping id="_oGL28YUjEeiXvbwM7pTNdA">
+      <msl:annotations key="Rule1" value="MP005"/>
+      <msl:input name="_path12" path="$_resource1/Atomic Entities/Classification/Measurement Period/Calendar Year" pathXmiId="_21RF1yVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path13" path="$_resource0/Dimensions/Classification Dimensions/Calendar Date Dimension/Calendar Year" pathXmiId="_gw-jgIe3EeCwqL2i7aWp1A"/>
+    </msl:mapping>
+    <msl:input name="_path12" path="$_resource1/Atomic Entities/Classification/Measurement Period" pathXmiId="_21RFqCVlEdyPG407Qktk6Q"/>
+    <msl:output name="_path13" path="$_resource0/Dimensions/Classification Dimensions/Calendar Date Dimension" pathXmiId="_gvJ-kIe3EeCwqL2i7aWp1A"/>
+  </msl:mapping>
+  <msl:mapping id="__K7LoIUoEeiXvbwM7pTNdA">
+    <msl:mapping id="_mKv2QIUpEeiXvbwM7pTNdA">
+      <msl:annotations key="Rule1" value="MP005"/>
+      <msl:annotations key="Rule2" value="Use the code of the classification Value matching the Transaction Type Id"/>
+      <msl:input name="_path55" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value/Classification Id" pathXmiId="_2m9j7SVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path73" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value/Classification Code" pathXmiId="_2nHU6yVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path74" path="$_resource1/Atomic Entities/Classification Hierarchy/Transaction Type/Transaction Type Id" pathXmiId="_2seWDCVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path75" path="$_resource0/Dimensions/Event Dimensions/Payment Card Transaction Mini Dimension/Transaction Type Code" pathXmiId="_iGD7IIOwEeil_fFVoh1shA"/>
+    </msl:mapping>
+    <msl:mapping id="_noLdkIUpEeiXvbwM7pTNdA">
+      <msl:annotations key="Rule1" value="MP005"/>
+      <msl:annotations key="Rule2" value="Ude the Name of the Classification Value matching the Transaction Type Id."/>
+      <msl:input name="_path76" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value/Classification Id" pathXmiId="_2m9j7SVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path77" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value/Classification Name" pathXmiId="_2nRF1iVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path78" path="$_resource1/Atomic Entities/Classification Hierarchy/Transaction Type/Transaction Type Id" pathXmiId="_2seWDCVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path79" path="$_resource0/Dimensions/Event Dimensions/Payment Card Transaction Mini Dimension/Transaction Type Name" pathXmiId="_a5vT0IOvEeil_fFVoh1shA"/>
+    </msl:mapping>
+    <msl:mapping id="_JooIEIqkEeiDLPUODiJcHA">
+      <msl:annotations key="Rule1" value="Derive the Category Code from the relationship between the Transaction Type and the Category for the current Effective date/End Date bracket (End date is blank or future date)"/>
+      <msl:input name="_path203" path="$_resource1/Atomic Entities/Associatives/Group &amp;&amp;&amp; Group Rltnp/Subject Group Id" pathXmiId="_2xjDPCVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path204" path="$_resource1/Atomic Entities/Associatives/Group &amp;&amp;&amp; Group Rltnp/Object Group Id" pathXmiId="_2xjDQCVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path205" path="$_resource1/Atomic Entities/Associatives/Group &amp;&amp;&amp; Group Rltnp/Group &amp;&amp;&amp; Group Rltnp Type Id" pathXmiId="_2xjDRCVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path206" path="$_resource1/Atomic Entities/Associatives/Group &amp;&amp;&amp; Group Rltnp/Effective Date" pathXmiId="_2xjDSCVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path207" path="$_resource1/Atomic Entities/Associatives/Group &amp;&amp;&amp; Group Rltnp/End Date" pathXmiId="_2xjDXCVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path208" path="$_resource1/Atomic Entities/Classification Hierarchy/Transaction Category/Transaction Category Id" pathXmiId="_fCFvgIU_EeiXvbwM7pTNdA"/>
+      <msl:input name="_path209" path="$_resource1/Atomic Entities/Classification Hierarchy/Transaction Type/Transaction Type Id" pathXmiId="_2seWDCVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path202" path="$_resource0/Dimensions/Event Dimensions/Payment Card Transaction Mini Dimension/Payment Card Transaction Category Code" pathXmiId="_wHkY8IOuEeil_fFVoh1shA"/>
+    </msl:mapping>
+    <msl:mapping id="_Nw0QAIqlEeiDLPUODiJcHA">
+      <msl:annotations key="Rule1" value="MP005"/>
+      <msl:input name="_path210" path="$_resource1/Atomic Entities/Classification Hierarchy/Transaction Type/Transaction Type Id" pathXmiId="_2seWDCVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path211" path="$_resource0/Dimensions/Event Dimensions/Payment Card Transaction Mini Dimension/Anchor Id" pathXmiId="_12fk4IqkEeiDLPUODiJcHA"/>
+    </msl:mapping>
+    <msl:mapping id="_PshHsIqlEeiDLPUODiJcHA">
+      <msl:annotations key="Rule1" value="Set to TRUE if a new instance is being created for a given Anchor ID. FALSE for all instances where a newer instance with the same Anchor Id exists."/>
+      <msl:output name="_path212" path="$_resource0/Dimensions/Event Dimensions/Payment Card Transaction Mini Dimension/Current Row Indicator" pathXmiId="_2A9IcIqkEeiDLPUODiJcHA"/>
+    </msl:mapping>
+    <msl:mapping id="_ckanMIqlEeiDLPUODiJcHA">
+      <msl:annotations key="Rule1" value="Derived from the Code"/>
+      <msl:input name="_path213" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value/Classification Id" pathXmiId="_2m9j7SVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path214" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value/Classification Code" pathXmiId="_2nHU6yVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path215" path="$_resource1/Atomic Entities/Classification Hierarchy/Transaction Category/Transaction Category Id" pathXmiId="_fCFvgIU_EeiXvbwM7pTNdA"/>
+      <msl:output name="_path216" path="$_resource0/Dimensions/Event Dimensions/Payment Card Transaction Mini Dimension/Payment Card Transaction Category Name" pathXmiId="_rHhUkIOwEeil_fFVoh1shA"/>
+    </msl:mapping>
+    <msl:input name="_path20" path="$_resource1/Atomic Entities/Classification Hierarchy/Transaction Type" pathXmiId="_2seWBiVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path54" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value" pathXmiId="_2m9j5yVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path200" path="$_resource1/Atomic Entities/Classification Hierarchy/Transaction Category" pathXmiId="_JraiUIU-EeiXvbwM7pTNdA"/>
+    <msl:input name="_path201" path="$_resource1/Atomic Entities/Associatives/Group &amp;&amp;&amp; Group Rltnp" pathXmiId="_2xjDNiVlEdyPG407Qktk6Q"/>
+    <msl:output name="_path21" path="$_resource0/Dimensions/Event Dimensions/Payment Card Transaction Mini Dimension" pathXmiId="_QG8foIOvEeil_fFVoh1shA"/>
+  </msl:mapping>
+  <msl:mapping id="_24bfEIUqEeiXvbwM7pTNdA">
+    <msl:mapping id="_T4Vj8IUrEeiXvbwM7pTNdA">
+      <msl:annotations key="Rule1" value="MP005"/>
+      <msl:input name="_path83" path="$_resource1/Atomic Entities/Event/Payment Transaction/Converted Currency Amount" pathXmiId="_5-Uve5LNEdysmtIzPvaXnw"/>
+      <msl:output name="_path84" path="$_resource0/Data Concept Facts/Event Facts/Payment Card Transaction Fact/Transaction Amount" pathXmiId="_Kz2SdXUUEeap1NPMm0IFsQ"/>
+    </msl:mapping>
+    <msl:mapping id="_X0VmAIo6EeiLgp7XDrhl1w">
+      <msl:annotations key="Rule1" value="Use the Id of the latest (current row) instance of &lt;Credit Card Arrangement Dimension> whose Account Number matches that of the source &lt;Credit Card Arrangement>"/>
+      <msl:input name="_path161" path="$_resource1/Atomic Entities/Event/Transaction/Primary Arrangement Id" pathXmiId="_2sVMKCVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path162" path="$_resource0/Data Concept Facts/Event Facts/Payment Card Transaction Fact/Credit Card Arrangement Dimension Id" pathXmiId="_E-JRIYOtEeil_fFVoh1shA"/>
+    </msl:mapping>
+    <msl:mapping id="_q2b98Io6EeiLgp7XDrhl1w">
+      <msl:input name="_path163" path="$_resource1/Atomic Entities/Event/Transaction/Transaction Date" pathXmiId="_2seV9SVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path164" path="$_resource0/Data Concept Facts/Event Facts/Payment Card Transaction Fact/Transaction Date Dimension Id" pathXmiId="_2AGa4HUMEeap1NPMm0IFsQ"/>
+    </msl:mapping>
+    <msl:mapping id="_zdsHoIo6EeiLgp7XDrhl1w">
+      <msl:input name="_path165" path="$_resource1/Atomic Entities/Event/Transaction/Converted Currency Id" pathXmiId="_BLJ0UPenEeOwF8KdD8gk_A"/>
+      <msl:output name="_path166" path="$_resource0/Data Concept Facts/Event Facts/Payment Card Transaction Fact/Converted Currency Dimension Id" pathXmiId="_nxzeQHUOEeap1NPMm0IFsQ"/>
+    </msl:mapping>
+    <msl:mapping id="_4ETtcIo6EeiLgp7XDrhl1w">
+      <msl:annotations key="Rule1" value="Populate the target field with the Id of the &lt;Payment card Transaction Mini Dimension> whose combination of attributes matches the transaction being loaded."/>
+      <msl:annotations key="Rule2" value="The value of the &lt;payment Card Transaction Mini Dimension>.Transaction Type Code attribute is determined as follows : it matches the &lt;Transaction>.Transaction Type Id in the source"/>
+      <msl:annotations key="Rule3" value="The values of other fields do not have to be determined as they are dependent on the Transaction Type Code."/>
+      <msl:input name="_path167" path="$_resource1/Atomic Entities/Event/Transaction/Transaction Type Id" pathXmiId="_2sVMBCVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path168" path="$_resource0/Data Concept Facts/Event Facts/Payment Card Transaction Fact/Payment Card Transaction Mini Dimension Id" pathXmiId="_GakEdIOwEeil_fFVoh1shA"/>
+    </msl:mapping>
+    <msl:input name="_path80" path="$_resource1/Atomic Entities/Event/Payment Transaction" pathXmiId="_5-K-ZpLNEdysmtIzPvaXnw"/>
+    <msl:input name="_path81" path="$_resource1/Atomic Entities/Event/Transaction" pathXmiId="_2sLbOCVlEdyPG407Qktk6Q"/>
+    <msl:output name="_path82" path="$_resource0/Data Concept Facts/Event Facts/Payment Card Transaction Fact" pathXmiId="_ow0yoHULEeap1NPMm0IFsQ"/>
+  </msl:mapping>
+  <msl:mapping id="_nNVK0IqeEeiDLPUODiJcHA">
+    <msl:mapping id="_ph6ckIqeEeiDLPUODiJcHA">
+      <msl:annotations key="Rule1" value="Include instances with TRUE and FALSE values based on the valid combination list"/>
+      <msl:output name="_path8" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Mini Dimension/Credit Card First Activation Flag" pathXmiId="_yZ2XcHpUEeieosU-d4zNSw"/>
+    </msl:mapping>
+    <msl:mapping id="_y6NBoIqeEeiDLPUODiJcHA">
+      <msl:annotations key="Rule1" value="Include instances with TRUE and FALSE values based on the valid combination list"/>
+      <msl:output name="_path9" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Mini Dimension/Credit Card First Purchase Flag" pathXmiId="_EhU6MHpVEeieosU-d4zNSw"/>
+    </msl:mapping>
+    <msl:mapping id="_2p3xUIqeEeiDLPUODiJcHA">
+      <msl:annotations key="Rule1" value="Create instances for every possible value and combine them with the other attributes according to the valid combination list"/>
+      <msl:input name="_path10" path="$_resource1/Atomic Entities/Classification Hierarchy/Arrangement Life Cycle Status Type/Arrangement Life Cycle Status Type Id" pathXmiId="_2utxsSVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path11" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value/Classification Id" pathXmiId="_2m9j7SVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path184" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value/Classification Code" pathXmiId="_2nHU6yVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path185" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Mini Dimension/Life Cycle Status Code" pathXmiId="_5ATJYIRMEeiXvbwM7pTNdA"/>
+    </msl:mapping>
+    <msl:mapping id="_J90HMIqfEeiDLPUODiJcHA">
+      <msl:annotations key="Rule1" value="Derive Name from the Code, it does NOT drive new instances."/>
+      <msl:input name="_path186" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value/Classification Code" pathXmiId="_2nHU6yVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path187" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value/Classification Name" pathXmiId="_2nRF1iVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path198" path="$_resource1/Atomic Entities/Classification Hierarchy/Arrangement Life Cycle Status Type/Arrangement Life Cycle Status Type Id" pathXmiId="_2utxsSVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path199" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value/Classification Id" pathXmiId="_2m9j7SVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path188" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Mini Dimension/Life Cycle Status Name" pathXmiId="_kfGJ0ByYEeSy8IDRlTzkMg"/>
+    </msl:mapping>
+    <msl:mapping id="_RcZ_sIqfEeiDLPUODiJcHA">
+      <msl:annotations key="Rule1" value="Create instances for every possible value and combine them with the other attributes according to the valid combination list"/>
+      <msl:input name="_path189" path="$_resource1/Atomic Entities/Classification Hierarchy/Arrangement Life Cycle Status Reason Type/Arrangement Life Cycle Status Reason Type Id" pathXmiId="_lm_j8OVNEdy5v785b4KVYQ"/>
+      <msl:input name="_path190" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value/Classification Id" pathXmiId="_2m9j7SVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path191" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value/Classification Code" pathXmiId="_2nHU6yVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path192" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Mini Dimension/Life Cycle Status Reason Code" pathXmiId="_8IS1EIRMEeiXvbwM7pTNdA"/>
+    </msl:mapping>
+    <msl:mapping id="_bIBJYIqfEeiDLPUODiJcHA">
+      <msl:annotations key="Rule1" value="Derive Name from the Code, it does NOT drive new instances."/>
+      <msl:input name="_path193" path="$_resource1/Atomic Entities/Classification Hierarchy/Arrangement Life Cycle Status Reason Type/Arrangement Life Cycle Status Reason Type Id" pathXmiId="_lm_j8OVNEdy5v785b4KVYQ"/>
+      <msl:input name="_path194" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value/Classification Id" pathXmiId="_2m9j7SVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path195" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value/Classification Code" pathXmiId="_2nHU6yVlEdyPG407Qktk6Q"/>
+      <msl:input name="_path196" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value/Classification Name" pathXmiId="_2nRF1iVlEdyPG407Qktk6Q"/>
+      <msl:output name="_path197" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Mini Dimension/Life Cycle Status Reason Name" pathXmiId="_kfbhChyYEeSy8IDRlTzkMg"/>
+    </msl:mapping>
+    <msl:input name="_path4" path="$_resource1/Atomic Entities/Classification Hierarchy/Arrangement Life Cycle Status Reason Type" pathXmiId="_2utxoSVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path5" path="$_resource1/Atomic Entities/Classification Hierarchy/Arrangement Life Cycle Status Type" pathXmiId="_2utxqyVlEdyPG407Qktk6Q"/>
+    <msl:input name="_path6" path="$_resource1/Atomic Entities/Classification Hierarchy/Classification Value" pathXmiId="_2m9j5yVlEdyPG407Qktk6Q"/>
+    <msl:output name="_path7" path="$_resource0/Dimensions/Arrangement Dimensions/Credit Card Arrangement Mini Dimension" pathXmiId="_iThQo7_EEeGJWss1NE4Cvg"/>
+  </msl:mapping>
+  <msl:inputs name="_resource1" location="/IDA-Project/Atomic Warehouse Model.ldm" root="/Atomic Warehouse Model"/>
+  <msl:outputs name="_resource0" location="/IDA-Project/Dimensional Warehouse Model.ldm" root="/Dimensional Warehouse Model"/>
+</msl:mappingRoot>

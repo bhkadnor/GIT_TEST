@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.9.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:LogicalDataModel="http:///com/ibm/db/models/logical/logical.ecore">
+  <LogicalDataModel:Package xmi:id="_157_sI6wEeiYx-AkSxaI-A" name="Package1" targetNamespace="PDM_REV.ldm" contents="_1735YI6wEeiYx-AkSxaI-A _1735b46wEeiYx-AkSxaI-A _1735dY6wEeiYx-AkSxaI-A _1735fo6wEeiYx-AkSxaI-A _1735go6wEeiYx-AkSxaI-A _1735hI6wEeiYx-AkSxaI-A _1735jI6wEeiYx-AkSxaI-A _1735ko6wEeiYx-AkSxaI-A _1735lo6wEeiYx-AkSxaI-A _1735ao6wEeiYx-AkSxaI-A _1735mo6wEeiYx-AkSxaI-A _1735no6wEeiYx-AkSxaI-A _1735oo6wEeiYx-AkSxaI-A _1735qI6wEeiYx-AkSxaI-A _1735rI6wEeiYx-AkSxaI-A _1735sI6wEeiYx-AkSxaI-A _1735tI6wEeiYx-AkSxaI-A _1735uI6wEeiYx-AkSxaI-A"/>
+  <LogicalDataModel:Entity xmi:id="_1735YI6wEeiYx-AkSxaI-A" name="EMP" package="_157_sI6wEeiYx-AkSxaI-A" relationshipEnds="_1735aY6wEeiYx-AkSxaI-A" relationships="_1735Z46wEeiYx-AkSxaI-A">
+    <attributes xmi:id="_1735YY6wEeiYx-AkSxaI-A" name="EMPID" dataType="CHAR(5)" required="true"/>
+    <attributes xmi:id="_1735Yo6wEeiYx-AkSxaI-A" name="EMPNAME" dataType="CHAR(5)"/>
+    <attributes xmi:id="_1735Y46wEeiYx-AkSxaI-A" name="COMID" dataType="CHAR(5)" required="true"/>
+    <attributes xmi:id="_1735ZI6wEeiYx-AkSxaI-A" name="COMPBRANCH" dataType="CHAR(5)" defaultValue="abr" required="true"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_1735ZY6wEeiYx-AkSxaI-A" name="EMP_PK" attributes="_1735YY6wEeiYx-AkSxaI-A"/>
+    <keys xsi:type="LogicalDataModel:ForeignKey" xmi:id="_1735Zo6wEeiYx-AkSxaI-A" name="ForeignKey" attributes="_1735Y46wEeiYx-AkSxaI-A _1735ZI6wEeiYx-AkSxaI-A" relationshipEnds="_1735aY6wEeiYx-AkSxaI-A"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Relationship xmi:id="_1735Z46wEeiYx-AkSxaI-A" name="EMP_COMPANY_FK" relationshipType="NON_IDENTIFYING" existenceOptional="true" owningEntity="_1735YI6wEeiYx-AkSxaI-A">
+    <relationshipEnds xmi:id="_1735aI6wEeiYx-AkSxaI-A" deleteAction="CASCADE" entity="_1735ao6wEeiYx-AkSxaI-A" key="_1735bo6wEeiYx-AkSxaI-A"/>
+    <relationshipEnds xmi:id="_1735aY6wEeiYx-AkSxaI-A" cardinality="ZERO_TO_MANY" entity="_1735YI6wEeiYx-AkSxaI-A" key="_1735Zo6wEeiYx-AkSxaI-A"/>
+  </LogicalDataModel:Relationship>
+  <LogicalDataModel:Entity xmi:id="_1735ao6wEeiYx-AkSxaI-A" name="COMPANY" package="_157_sI6wEeiYx-AkSxaI-A" relationshipEnds="_1735aI6wEeiYx-AkSxaI-A">
+    <attributes xmi:id="_1735a46wEeiYx-AkSxaI-A" name="COMID" dataType="CHAR(5)" required="true"/>
+    <attributes xmi:id="_1735bI6wEeiYx-AkSxaI-A" name="COMNAME" dataType="CHAR(5)"/>
+    <attributes xmi:id="_1735bY6wEeiYx-AkSxaI-A" name="COMPBRANCH" dataType="CHAR(5)" defaultValue="abr" required="true"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_1735bo6wEeiYx-AkSxaI-A" name="COMPANY_PK" attributes="_1735a46wEeiYx-AkSxaI-A _1735bY6wEeiYx-AkSxaI-A" relationshipEnds="_1735aI6wEeiYx-AkSxaI-A"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_1735b46wEeiYx-AkSxaI-A" name="TABLEPK" package="_157_sI6wEeiYx-AkSxaI-A">
+    <attributes xmi:id="_1735cI6wEeiYx-AkSxaI-A" name="COLUMN1" dataType="CHAR(5)" required="true"/>
+    <attributes xmi:id="_1735cY6wEeiYx-AkSxaI-A" name="COLUMN2" dataType="CHAR(5)" required="true"/>
+    <attributes xmi:id="_1735co6wEeiYx-AkSxaI-A" name="COLUMN3" dataType="CHAR(5)" required="true"/>
+    <attributes xmi:id="_1735c46wEeiYx-AkSxaI-A" name="COLUMN5" dataType="CHAR(5)"/>
+    <attributes xmi:id="_1735dI6wEeiYx-AkSxaI-A" name="COLUMN6" dataType="CHAR(5)"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_1735dY6wEeiYx-AkSxaI-A" name="SCHOOL" package="_157_sI6wEeiYx-AkSxaI-A" relationshipEnds="_1735fI6wEeiYx-AkSxaI-A">
+    <attributes xmi:id="_1735do6wEeiYx-AkSxaI-A" name="SCHOOLID" dataType="CHAR(5)" required="true"/>
+    <attributes xmi:id="_1735d46wEeiYx-AkSxaI-A" name="ADDRESS" dataType="CHAR(5)"/>
+    <attributes xmi:id="_1735eI6wEeiYx-AkSxaI-A" name="BRANCH" dataType="CHAR(5)" required="true"/>
+    <attributes xmi:id="_1735eY6wEeiYx-AkSxaI-A" name="SCHOOLNAME" dataType="CHAR(5)"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_1735eo6wEeiYx-AkSxaI-A" name="SCHOOL_PK" attributes="_1735do6wEeiYx-AkSxaI-A _1735eI6wEeiYx-AkSxaI-A" relationshipEnds="_1735fI6wEeiYx-AkSxaI-A"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Relationship xmi:id="_1735e46wEeiYx-AkSxaI-A" name="STUDENT_SCHOOL_FK" relationshipType="NON_IDENTIFYING" existenceOptional="true" owningEntity="_1735hI6wEeiYx-AkSxaI-A">
+    <relationshipEnds xmi:id="_1735fI6wEeiYx-AkSxaI-A" deleteAction="CASCADE" entity="_1735dY6wEeiYx-AkSxaI-A" key="_1735eo6wEeiYx-AkSxaI-A"/>
+    <relationshipEnds xmi:id="_1735fY6wEeiYx-AkSxaI-A" cardinality="ZERO_TO_MANY" entity="_1735hI6wEeiYx-AkSxaI-A" key="_1735i46wEeiYx-AkSxaI-A"/>
+  </LogicalDataModel:Relationship>
+  <LogicalDataModel:Entity xmi:id="_1735fo6wEeiYx-AkSxaI-A" name="TESTTAB2" package="_157_sI6wEeiYx-AkSxaI-A">
+    <attributes xmi:id="_1735f46wEeiYx-AkSxaI-A" name="PK1" dataType="CHAR(5)" required="true"/>
+    <attributes xmi:id="_1735gI6wEeiYx-AkSxaI-A" name="COL2" dataType="CHAR(5)"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_1735gY6wEeiYx-AkSxaI-A" name="TESTTAB2_PK" attributes="_1735f46wEeiYx-AkSxaI-A"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_1735go6wEeiYx-AkSxaI-A" name="TESTTABLE" package="_157_sI6wEeiYx-AkSxaI-A">
+    <attributes xmi:id="_1735g46wEeiYx-AkSxaI-A" name="COL1" dataType="CHAR(5)"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_1735hI6wEeiYx-AkSxaI-A" name="STUDENT" package="_157_sI6wEeiYx-AkSxaI-A" relationshipEnds="_1735fY6wEeiYx-AkSxaI-A" relationships="_1735e46wEeiYx-AkSxaI-A">
+    <attributes xmi:id="_1735hY6wEeiYx-AkSxaI-A" name="STUDENTID" dataType="CHAR(5)" required="true"/>
+    <attributes xmi:id="_1735ho6wEeiYx-AkSxaI-A" name="NAME" dataType="CHAR(5)"/>
+    <attributes xmi:id="_1735h46wEeiYx-AkSxaI-A" name="ADDRESS" dataType="CHAR(5)"/>
+    <attributes xmi:id="_1735iI6wEeiYx-AkSxaI-A" name="SCHOOLID" dataType="CHAR(5)" required="true"/>
+    <attributes xmi:id="_1735iY6wEeiYx-AkSxaI-A" name="BRANCH" dataType="CHAR(5)" required="true"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_1735io6wEeiYx-AkSxaI-A" name="STUDENT_PK" attributes="_1735hY6wEeiYx-AkSxaI-A"/>
+    <keys xsi:type="LogicalDataModel:ForeignKey" xmi:id="_1735i46wEeiYx-AkSxaI-A" name="ForeignKey" attributes="_1735iI6wEeiYx-AkSxaI-A _1735iY6wEeiYx-AkSxaI-A" relationshipEnds="_1735fY6wEeiYx-AkSxaI-A"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_1735jI6wEeiYx-AkSxaI-A" name="TABLE COMMENT" package="_157_sI6wEeiYx-AkSxaI-A">
+    <attributes xmi:id="_1735jY6wEeiYx-AkSxaI-A" name="COLUMN1" dataType="CHAR(5)" required="true"/>
+    <attributes xmi:id="_1735jo6wEeiYx-AkSxaI-A" name="COLUMN2" description="This is PK" dataType="CHAR(5)" required="true"/>
+    <attributes xmi:id="_1735j46wEeiYx-AkSxaI-A" name="COLUMN3" description="This is normal Col" dataType="CHAR(5)"/>
+    <attributes xmi:id="_1735kI6wEeiYx-AkSxaI-A" name="COLUMN4" dataType="CHAR(5)"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_1735kY6wEeiYx-AkSxaI-A" name="TABLE COMMENT_PK" attributes="_1735jY6wEeiYx-AkSxaI-A _1735jo6wEeiYx-AkSxaI-A"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_1735ko6wEeiYx-AkSxaI-A" name="VARBIN CONVERSION TEST4" package="_157_sI6wEeiYx-AkSxaI-A">
+    <attributes xmi:id="_1735k46wEeiYx-AkSxaI-A" name="KEY" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_1735lI6wEeiYx-AkSxaI-A" name="CODE PAGE NAME" dataType="VARCHAR(20)"/>
+    <attributes xmi:id="_1735lY6wEeiYx-AkSxaI-A" name="VAR BINARY TEXT" dataType="VARBINARY(80)"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_1735lo6wEeiYx-AkSxaI-A" name="PRODUCT" package="_157_sI6wEeiYx-AkSxaI-A">
+    <attributes xmi:id="_1735l46wEeiYx-AkSxaI-A" name="PNAME" dataType="CHAR(5)"/>
+    <attributes xmi:id="_1735mI6wEeiYx-AkSxaI-A" name="PID" dataType="CHAR(5)" defaultValue="ABC" required="true"/>
+    <attributes xmi:id="_1735mY6wEeiYx-AkSxaI-A" name="PCODE" description="This is PK 2" dataType="CHAR(5)" required="true"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_1735mo6wEeiYx-AkSxaI-A" name="VARBIN CONVERSION TEST" package="_157_sI6wEeiYx-AkSxaI-A">
+    <attributes xmi:id="_1735m46wEeiYx-AkSxaI-A" name="KEY" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_1735nI6wEeiYx-AkSxaI-A" name="CODE PAGE NAME" dataType="VARCHAR(20)"/>
+    <attributes xmi:id="_1735nY6wEeiYx-AkSxaI-A" name="VAR BINARY TEXT" dataType="VARBINARY(80)"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_1735no6wEeiYx-AkSxaI-A" name="VARBIN CONVERSION TEST 1" package="_157_sI6wEeiYx-AkSxaI-A">
+    <attributes xmi:id="_1735n46wEeiYx-AkSxaI-A" name="KEY" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_1735oI6wEeiYx-AkSxaI-A" name="CODE PAGE NAME" dataType="VARCHAR(20)"/>
+    <attributes xmi:id="_1735oY6wEeiYx-AkSxaI-A" name="VAR BINARY TEXT" dataType="VARBINARY(80)"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_1735oo6wEeiYx-AkSxaI-A" name="TEST TABLE" package="_157_sI6wEeiYx-AkSxaI-A">
+    <attributes xmi:id="_1735o46wEeiYx-AkSxaI-A" name="COLUMN1" dataType="CHAR(5)" required="true"/>
+    <attributes xmi:id="_1735pI6wEeiYx-AkSxaI-A" name="COLUMN2" dataType="CHAR(5)" required="true"/>
+    <attributes xmi:id="_1735pY6wEeiYx-AkSxaI-A" name="COLUMN3" dataType="CHAR(5)"/>
+    <keys xsi:type="LogicalDataModel:AlternateKey" xmi:id="_1735po6wEeiYx-AkSxaI-A" name="TEST TABLE_AK" attributes="_1735pY6wEeiYx-AkSxaI-A _1735pI6wEeiYx-AkSxaI-A"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_1735p46wEeiYx-AkSxaI-A" name="TEST TABLE_PK" attributes="_1735o46wEeiYx-AkSxaI-A _1735pI6wEeiYx-AkSxaI-A"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_1735qI6wEeiYx-AkSxaI-A" name="VARBIN CONVERSION TEST3" package="_157_sI6wEeiYx-AkSxaI-A">
+    <attributes xmi:id="_1735qY6wEeiYx-AkSxaI-A" name="KEY" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_1735qo6wEeiYx-AkSxaI-A" name="CODE PAGE NAME" dataType="VARCHAR(20)"/>
+    <attributes xmi:id="_1735q46wEeiYx-AkSxaI-A" name="VAR BINARY TEXT" dataType="VARBINARY(80)"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_1735rI6wEeiYx-AkSxaI-A" name="NETEZZA TEST" package="_157_sI6wEeiYx-AkSxaI-A">
+    <attributes xmi:id="_1735rY6wEeiYx-AkSxaI-A" name="KEY" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_1735ro6wEeiYx-AkSxaI-A" name="CODE PAGE NAME" dataType="VARCHAR(20)"/>
+    <attributes xmi:id="_1735r46wEeiYx-AkSxaI-A" name="VAR BINARY TEXT" dataType="VARBINARY(80)"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_1735sI6wEeiYx-AkSxaI-A" name="SELFTABLE" package="_157_sI6wEeiYx-AkSxaI-A">
+    <attributes xmi:id="_1735sY6wEeiYx-AkSxaI-A" name="COLUMN1" dataType="CHAR(5)" required="true"/>
+    <attributes xmi:id="_1735so6wEeiYx-AkSxaI-A" name="COLUMN3" dataType="CHAR(5)"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_1735s46wEeiYx-AkSxaI-A" name="SELFTABLE_PK" attributes="_1735sY6wEeiYx-AkSxaI-A"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_1735tI6wEeiYx-AkSxaI-A" name="ENTITY1" package="_157_sI6wEeiYx-AkSxaI-A">
+    <attributes xmi:id="_1735tY6wEeiYx-AkSxaI-A" name="ATTRIBUTE1" dataType="CHAR(5)"/>
+    <attributes xmi:id="_1735to6wEeiYx-AkSxaI-A" name="ATTRIBUTE2" dataType="CHAR(5)"/>
+    <attributes xmi:id="_1735t46wEeiYx-AkSxaI-A" name="ATTRIBUTE6" dataType="CHAR(5)"/>
+    <attributes xmi:id="_3l1g0I6wEeiYx-AkSxaI-A" name="Attribute3" dataType="CHAR(5)" required="true"/>
+    <attributes xmi:id="_DUVwQI9qEeilj5Wx98KPcg" name="Attribute4" dataType="CHAR(5)" defaultValue="10" required="true"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_4G6NkI6wEeiYx-AkSxaI-A" name="ENTITY1_PK" attributes="_3l1g0I6wEeiYx-AkSxaI-A _DUVwQI9qEeilj5Wx98KPcg"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_1735uI6wEeiYx-AkSxaI-A" name="TAB ALTER" package="_157_sI6wEeiYx-AkSxaI-A">
+    <attributes xmi:id="_1735uY6wEeiYx-AkSxaI-A" name="COLUMN1" dataType="CHAR(5)" required="true"/>
+    <attributes xmi:id="_1735uo6wEeiYx-AkSxaI-A" name="COLUMN2" dataType="CHAR(5)" required="true"/>
+    <attributes xmi:id="_1735u46wEeiYx-AkSxaI-A" name="COLUMN3" dataType="CHAR(5)"/>
+    <attributes xmi:id="_1735vI6wEeiYx-AkSxaI-A" name="COLUMN4" dataType="CHAR(5)" defaultValue="ab" required="true"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_1735vY6wEeiYx-AkSxaI-A" name="TAB ALTER_PK" attributes="_1735uY6wEeiYx-AkSxaI-A _1735uo6wEeiYx-AkSxaI-A _1735vI6wEeiYx-AkSxaI-A"/>
+  </LogicalDataModel:Entity>
+</xmi:XMI>
